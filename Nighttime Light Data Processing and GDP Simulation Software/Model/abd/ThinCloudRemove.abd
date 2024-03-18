@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="ThinCloudRemove" library="" paramCount="3" description="云去除">
+        <param index="0" name="strInputFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff *.img);;All Files (*.*)"}'/>
+        <param index="1" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"GeoTiff Files (*.tif *.tiff)"}'/>
+        <param index="2" name="nPixelDataType" type="int" description="数据类型"/>
+    </Algo>
+</Configuration>

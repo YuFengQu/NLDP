@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="Batch_TransformToDb" library="Batch_TransformToDb" paramCount="5" description="转db影像">
+        <param index="0" name="strSrcFileName" type="file" description="输入影像列表"/>
+		<param index="1" name="enTransDataType" type="file" description="输入数据类型"/>
+		<param index="2" name="strSuffix" type="file" description="输出文件名后缀"/>
+		<param index="3" name="strFileTypeCode" type="file" description="输出文件数据类型"/>
+		<param index="4" name="strOutDir" type="file" direction="1" description="输出目录"/>
+    </Algo>
+</Configuration>

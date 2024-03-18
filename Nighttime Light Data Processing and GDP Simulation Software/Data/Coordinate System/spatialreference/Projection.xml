@@ -1,0 +1,223 @@
+<PROJECTIONLIST>
+    <PROJECTION>
+         <NAME>Albers_Conic_Equal_Area</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Longitude_Of_Center">-154.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Standard_Parallel_1">55.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Standard_Parallel_2">65.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Center">50.000000000000000000</PARAMETER>
+    </PROJECTION>
+    <PROJECTION>
+         <NAME>Azimuthal_Equidistant</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Longitude_Of_Center">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Center">60.000000000000000000</PARAMETER>
+    </PROJECTION>
+    <PROJECTION>
+         <NAME>Bonne</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Standard_Parallel_1">60.0000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION>
+         <NAME>Cylindrical_Equal_Area</NAME>
+         <PARAMETER key = "False_Easting">0.0000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000</PARAMETER>
+         <PARAMETER key = "Central_Meridian">0.000000000000</PARAMETER>
+         <PARAMETER key = "Standard_Parallel_1">30.00000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION>
+         <NAME>Eckert_I</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION>
+         <NAME>Eckert_II</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION>
+		 <NAME>Eckert_III</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION>
+		 <NAME>Eckert_IV</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION>
+		 <NAME>Eckert_V</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION>
+		 <NAME>Eckert_VI</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION>
+		 <NAME>Equidistant_Conic</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Longitude_Of_Center">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Standard_Parallel_1">60.00000000000</PARAMETER>
+         <PARAMETER  key = "Standard_Parallel_2">60.0000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Center">0.0000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION>
+		 <NAME>Equirectangular</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION>
+		 <NAME>Gall_Stereographic</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>      
+    </PROJECTION>
+     <PROJECTION> 
+         <NAME>Hotine_Oblique_Mercator</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Scale_Factor">0.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Azimuth">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Longitude_Of_Center">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Center">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION> 
+         <NAME>Hotine_Oblique_Mercator_Azimuth_Center</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Scale_Factor">0.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Azimuth">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Longitude_Of_Center">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Center">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION> 
+         <NAME>Lambert_Azimuthal_Equal_Area</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Longitude_Of_Center">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Center">0.0000000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION> 
+         <NAME>Lambert_Conformal_Conic_1SP</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Scale_Factor">1.00000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Origin">60.0000000000</PARAMETER>
+    </PROJECTION> 
+    <PROJECTION> 
+         <NAME>Lambert_Conformal_Conic_2SP</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Standard_Parallel_1">55.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Standard_Parallel_2">65.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Origin">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION> 
+         <NAME>Mercator_1SP</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Scale_Factor">1.000000000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION> 
+         <NAME>Mercator_2SP</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Standard_Parallel_1">1.000000000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION> 
+         <NAME>Mollweide</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION> 
+         <NAME>Oblique_Stereographic</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+		 <PARAMETER key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Scale_Factor">1.000000000000000000</PARAMETER>
+         <PARAMETER key = "Latitude_Of_Origin">0.000000000000</PARAMETER>
+    </PROJECTION> 
+     <PROJECTION> 
+         <NAME>Orthographic</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+		 <PARAMETER key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Latitude_Of_Origin">90.000000000000000000</PARAMETER>
+    </PROJECTION>
+     <PROJECTION> 
+         <NAME>Polar_Stereographic</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Origin">0.000000000000000000</PARAMETER>
+    </PROJECTION>
+     <PROJECTION> 
+         <NAME>Polyconic</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Origin">0.000000000000000000</PARAMETER>
+    </PROJECTION>
+    <PROJECTION> 
+         <NAME>Robinson</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Longitude_Of_Center">0.000000000000000000</PARAMETER>
+    </PROJECTION>
+  <PROJECTION> 
+         <NAME>Sinusoidal</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Longitude_Of_Center">0.000000000000000000</PARAMETER>
+    </PROJECTION>
+  <PROJECTION> 
+         <NAME>Stereographic</NAME>
+         <PARAMETER key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER key = "Central_Meridian">0.000000000000000000</PARAMETER>
+		 <PARAMETER key = "Scale_Factor">1.0000000000</PARAMETER>
+         <PARAMETER key = "Latitude_Of_Origin">0.000000000000000000</PARAMETER>
+  </PROJECTION>
+  <PROJECTION> 
+         <NAME>Transverse_Mercator</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Scale_Factor">1.0000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_Origin">0.000000000000000000</PARAMETER>
+    </PROJECTION>
+   <PROJECTION> 
+         <NAME>Two_Point_Equidistant</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Latitude_Of_1st_Point">0.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Latitude_Of_2nd_Point">60.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Longitude_Of_1st_Point">0.000000000000000000</PARAMETER>
+		 <PARAMETER  key = "Longitude_Of_2nd_Point">60.000000000000000000</PARAMETER>
+    </PROJECTION>
+     <PROJECTION> 
+         <NAME>VanDerGrinten</NAME>
+         <PARAMETER  key = "False_Easting">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "False_Northing">0.000000000000000000</PARAMETER>
+         <PARAMETER  key = "Central_Meridian">0.000000000000000000</PARAMETER>
+    </PROJECTION>
+</PROJECTIONLIST>

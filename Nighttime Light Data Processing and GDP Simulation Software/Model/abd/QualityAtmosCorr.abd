@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="QualityAtmosCorr" library="QualityAtmosCorr" paramCount="3" description="大气校正产品质量评价">
+        <param index="0" name="strInputImagePath" type="file" description="待评价影像路径" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff *.img);;All Files (*.*)"}'/>
+        <param index="1" name="strBaseImage" type="file" direction="1" description="基准影像路径" typeParam='{"direction":"1", "filter":"GeoTiff Files (*.tif *.tiff *.img)"}'/>
+		<param index="2" name="strOutputRMSETxtPath" type="file" direction="1" description="RMSE统计文件路径" typeParam='{"direction":"1", "filter":"txt Files (*.txt)"}'/>
+        <param index="3" name="bRectify" type="int" direction="1" description="是否需要影像配准"/>
+    </Algo>
+</Configuration>

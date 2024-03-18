@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="VertexComponentAnalysis" library="" paramCount="2" description="顶点成分分析">
+        <param index="0" name="strInputFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff *.img);;All Files (*.*)"}'/>
+        <param index="1" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"GeoTiff Files (*.sli)"}'/>
+		<param index="2" name="m_EndmemberNums" type="int" description="端元个数"/>
+    </Algo>
+</Configuration>

@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<pieGeoTransforms>
+    <Params4>
+        <GeoTransformsModel DY="0" DX="0" TransName="Default" SrcSpaRef="" K="0" T="0" DesSpaRef=""/>
+        <GeoTransformsModel DY="-439821.976053" DX="-3266736.944339" SrcSpaRef="Beijing_1954_3_Degree_GK_CM_102E" TransName="Beijing_1954_3_Degree_GK_CM_102E-to-Xian_1980_3_Degree_GK_CM_102E" K="0.999999998447" T="0.076402" DesSpaRef="Xian_1980_3_Degree_GK_CM_102E"/>
+    </Params4>
+    <Params7>
+        <GeoTransformsModel DZ="0" DY="0" DX="0" TransName="Default" SrcSpaRef="" r="0" k="0" m="0.000000" DesSpaRef="" w="0"/>
+        <GeoTransformsModel DZ="118.047148" DY="73.846362" DX="266.608348" SrcSpaRef="GCS_WGS_1984" TransName="GCS_WGS_1984-to-GCS_Xian_1980" r="-4.701047" k="3.370298" m="-0.000000372251" DesSpaRef="GCS_Xian_1980" w="2.879787"/>
+    </Params7>
+</pieGeoTransforms>

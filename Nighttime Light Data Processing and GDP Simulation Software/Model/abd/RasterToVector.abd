@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="RasterToVector" library="RasterToVector" paramCount="2" description="影像匹配">
+        <param index="0" name="InputIMGFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="IsSingleOut" type="file" description="RPC文件名"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

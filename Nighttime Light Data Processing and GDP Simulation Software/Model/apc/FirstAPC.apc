@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<Configuration>
+    <!--算法-->
+    <Processes>
+        <Process class="algo" name="PIECalibration" description="辐射定标" posX="347" posY="-313" painter="{&quot;width&quot;:&quot;110.000000&quot;, &quot;height&quot;:&quot;110.000000&quot;}" processName="PIECalibration">
+            <Parameter name="strInputFile" type="file" direction="0" value="%GF1.tiff%" description=""/>
+            <Parameter name="strXMLFile" type="file" direction="0" value="%GF1.xml%" description=""/>
+            <Parameter name="nCalibrationType" type="int" direction="0" value="200" description=""/>
+            <Parameter name="strOutputFile" type="file" direction="1" value="%Calibration.tiff%" description=""/>
+        </Process>
+        <Process class="algo" name="AtmosphericCorrection" description="大气校正" posX="346" posY="-135" painter="{&quot;width&quot;:&quot;110.000000&quot;, &quot;height&quot;:&quot;110.000000&quot;}" processName="AtmosphericCorrection">
+            <Parameter name="nDataType" type="int" direction="0" value="1" description=""/>
+            <Parameter name="strInputFile" type="file" direction="0" value="%Calibration.tiff%" description=""/>
+            <Parameter name="strInputXML" type="file" direction="0" value="%Calibration.xml%" description=""/>
+            <Parameter name="nAtmModel" type="int" direction="0" value="0" description=""/>
+            <Parameter name="nAerosolType" type="int" direction="0" value="1" description=""/>
+            <Parameter name="fInitialVIS" type="float" direction="0" value="40.0" description=""/>
+            <Parameter name="nAeroRetrieval" type="int" direction="0" value="1" description=""/>
+            <Parameter name="strOutputSR" type="file" direction="1" value="%Atmospheric.tiff%" description=""/>
+        </Process>
+        <Process class="algo" name="PIEOrtho" description="正射校正" posX="350" posY="45" painter="{&quot;width&quot;:&quot;110.000000&quot;, &quot;height&quot;:&quot;110.000000&quot;}" processName="PIEOrtho">
+            <Parameter name="strSrcFileName" type="file" direction="0" value="%Atmospheric.tiff%" description=""/>
+            <Parameter name="strRPCFileName" type="file" direction="0" value="%Atmospheric.rpb%" description=""/>
+            <Parameter name="strGcpFileName" type="file" direction="0" value="" description=""/>
+            <Parameter name="strOutputFile" type="file" direction="1" value="%ortho.tif%" description=""/>
+            <Parameter name="strDestWKT" type="string" direction="0" value="GEOGCS[&quot;GCS_WGS_1984&quot;,&#10;    DATUM[&quot;D_WGS_1984&quot;,&#10;        SPHEROID[&quot;WGS_1984&quot;,6378137,298.257223563]],&#10;    PRIMEM[&quot;Greenwich&quot;,0],&#10;    UNIT[&quot;Degree&quot;,0.017453292519943295]]" description=""/>
+            <Parameter name="fConstDem" type="long" direction="0" value="340" description=""/>
+            <Parameter name="strDemfile" type="file" direction="0" value="" description=""/>
+            <Parameter name="lImageResampling" type="long" direction="0" value="0" description=""/>
+            <Parameter name="fOutPixelX" type="float" direction="0" value="0.000080" description=""/>
+            <Parameter name="fOutPixelY" type="float" direction="0" value="0.000080" description=""/>
+        </Process>
+        <Process class="algo" name="ImageClip" description="图像裁剪" posX="349" posY="218" painter="{&quot;width&quot;:&quot;110.000000&quot;, &quot;height&quot;:&quot;110.000000&quot;}" processName="ImageClip">
+            <Parameter name="strInputFile" type="file" direction="0" value="%ortho.tif%" description=""/>
+            <Parameter name="lXStart" type="long" direction="0" value="0" description=""/>
+            <Parameter name="lXEnd" type="string" direction="0" value="6260" description=""/>
+            <Parameter name="lYStart" type="string" direction="0" value="0" description=""/>
+            <Parameter name="lYEnd" type="long" direction="0" value="4860" description=""/>
+            <Parameter name="strShpFile" type="file" direction="0" value="" description=""/>
+            <Parameter name="strOutputFile" type="file" direction="1" value="%ImageClip.tif%" description=""/>
+        </Process>
+    </Processes>
+    <!--数据-->
+    <Vars>
+        <Var class="file" name="GF1.tiff" description="输入文件" posX="-6" posY="-231" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="1" value="G:/work/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.tiff"/>
+        <Var class="file" name="GF1.xml" description="元数据文件" posX="2" posY="-397" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="0" funExp="$ReplaceExtension(%GF1.tiff%, 'xml')"/>
+        <Var class="file" name="Calibration.tiff" description="辐射定标文件(*.tiff)" posX="707" posY="-324" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%GF1.tiff%, '_Calibration'), 'temp')"/>
+        <Var class="file" name="Calibration.xml" description="辐射定标文件(*.xml)" posX="649" posY="-135" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="0" funExp="$ReplaceExtension(%Calibration.tiff%, 'xml')"/>
+        <Var class="file" name="Atmospheric.tiff" description="大气校正文件(*.tiff)" posX="-16" posY="-75" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%GF1.tiff%, '_Atmospheric'), 'temp')"/>
+        <Var class="file" name="Atmospheric.rpb" description="大气校正文件(*.rpb)" posX="627" posY="36" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="0" funExp="$ReplaceExtension(%Atmospheric.tiff%, 'rpb')"/>
+        <Var class="file" name="ortho.tif" description="正射校正文件(*.tiff)" posX="41" posY="138" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%GF1.tiff%, '_ortho'), 'temp')"/>
+        <Var class="file" name="ImageClip.tif" description="图像裁剪文件(*.tiff)" posX="704" posY="216" painter="{&quot;width&quot;:&quot;300.000000&quot;, &quot;height&quot;:&quot;150.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%GF1.tiff%, '_ImageClip'), 'temp')"/>
+    </Vars>
+    <!--依赖关系-->
+    <Arrows>
+        <Arrow head="PIECalibration" headType="process" headParam="strInputFile" tail="GF1.tiff" tailType="var" tailParam="" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="PIECalibration" headType="process" headParam="strXMLFile" tail="GF1.xml" tailType="var" tailParam="" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="Calibration.tiff" headType="var" headParam="" tail="PIECalibration" tailType="process" tailParam="strOutputFile" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="AtmosphericCorrection" headType="process" headParam="strInputXML" tail="Calibration.xml" tailType="var" tailParam="" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="Atmospheric.tiff" headType="var" headParam="" tail="AtmosphericCorrection" tailType="process" tailParam="strOutputSR" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="AtmosphericCorrection" headType="process" headParam="strInputFile" tail="Calibration.tiff" tailType="var" tailParam="" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="PIEOrtho" headType="process" headParam="strRPCFileName" tail="Atmospheric.rpb" tailType="var" tailParam="" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="ortho.tif" headType="var" headParam="" tail="PIEOrtho" tailType="process" tailParam="strOutputFile" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="PIEOrtho" headType="process" headParam="strSrcFileName" tail="Atmospheric.tiff" tailType="var" tailParam="" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="ImageClip.tif" headType="var" headParam="" tail="ImageClip" tailType="process" tailParam="strOutputFile" class="arrow" posX="0" posY="0" painter=""/>
+        <Arrow head="ImageClip" headType="process" headParam="strInputFile" tail="ortho.tif" tailType="var" tailParam="" class="arrow" posX="0" posY="0" painter=""/>
+    </Arrows>
+</Configuration>

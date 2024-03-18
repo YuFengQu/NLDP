@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="UsingGlt" library="BuildGLT" paramCount="4" description="构建GLT">
+        <param index="0" name="strHdfFile" type="file" description="输入MOD03文件" typeParam='{"direction":"0", "filter":"MOD03 Files (*.hdf);;All Files (*.*)"}'/>
+        <param index="1" name="strGltFile" type="file" description="glt文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="2" name="strDatasetName" type="string" description="MOD03文件中的数据集名称"/> 
+        <param index="3" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+        <param index="4" name="DataType" type="enum" typeParam='{"0":"DN值", "1":"辐射亮度", "2":"反射率"}' defaultValue="1" description="定标类型"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

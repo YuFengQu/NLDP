@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="Batch_ComplexDataConvert" library="Batch_ComplexDataConvert" paramCount="6" description="复数据转换">
+        <param index="0" name="strSrcFileName" type="file" description="输入复数影像列表"/>
+		<param index="1" name="convertType" type="file" description="输入输出数据类型"/>
+		<param index="2" name="nameMethod" type="file" description="输出文件命名方式后缀"/>
+		<param index="3" name="strSuffix" type="file" description="输出文件名后缀"/>
+		<param index="4" name="strFileTypeCode" type="file" description="输出文件数据类型"/>
+		<param index="5" name="strOutputData" type="file" direction="1" description="输出目录"/>
+    </Algo>
+</Configuration>

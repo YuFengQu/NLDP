@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="ImagePyramidBuild" library="ImagePyramidBuildAlgo" paramCount="1" description="创建金字塔">
+        <param index="0" name="strInputFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+    </Algo>
+</Configuration>

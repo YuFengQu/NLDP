@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="CloudDetect" library="CloudDetect" paramCount="1" description="云检测">
+        <param index="0" name="InputFilePath" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

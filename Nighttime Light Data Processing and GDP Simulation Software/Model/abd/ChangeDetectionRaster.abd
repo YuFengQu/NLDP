@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="ChangeDetectionRaster" library="SysAlgo_MltSclSgmnt" paramCount="8" description="栅格变化检测">
+        <param index="0" name="pszRst1File" type="file" description="输入第一个栅格" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="pszRst2File" type="file" description="输入第一个栅格" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="2" name="pszSubFile" type="file" description="裁剪文件" />
+        <param index="3" name="dfThreaold" type="float" defaultValue="1.0" description="变化检测阈值" />
+        <param index="4" name="nMinAreaPixs" type="int" description="过滤的最小图斑像素个数"/>
+        <param index="5" name="nWinSize" type="int"  description="影像配准窗口大小" />
+        <param index="6" name="pszCutline" type="string" description="输入的裁切范围，WKT格式，坐标系与第一个栅格保持一致"/>
+        <param index="7" name="pszChgFile" type="file" direction="1" description="输出变化检测矢量"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

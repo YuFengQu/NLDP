@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="ProjectDef" library="ProjectTransAlgo" paramCount="3" description="投影定义">
+        <param index="0" name="InputIMGFile" type="file" description="输入文件"/>
+        <param index="1" name="DefProj" type="spatialReference" description="输入投影"/>
+    </Algo>
+</Configuration>

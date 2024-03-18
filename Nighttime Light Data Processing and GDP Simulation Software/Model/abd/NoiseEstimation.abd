@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="NoiseEstimation" library="NoiseEstimation" paramCount="3" description="噪声估计">
+		<param index="0" name="InputFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+		<param index="1" name="OutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+		<param index="2" name="sam" type="file" direction="1" description="光谱角" typeParam='{"direction":"1", "filter":"Statics Files (*.sta)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

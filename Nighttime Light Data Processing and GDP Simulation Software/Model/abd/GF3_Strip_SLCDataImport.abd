@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="GF3_Strip_SLCDataImport" library="GF3_Strip_SLCDataImport" paramCount="5" description="高分三号条带模式导入">
+        <param index="0" name="strSrcFileName" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.meta.xml);;All Files (*.*)"}'/>
+		<param index="1" name="GF3_PrefixType" type="enum" description="输出影像前缀命名方式" typeParam='{"GF3_ImageDateAndTime":"影像日期和时间", "GF3_ImageDate":"影像日期", "GF3_OriginalName":"原始影像名字", "GF3_CustomName":"自定义"}'/>
+		<param index="2" name="strOutFilePrefix" type="file" description="输出文件自定义前缀"/>
+		<param index="3" name="strOutputFileDir" type="file" description="输出文件夹"/>
+		<param index="4" name="strFileTypeCode" type="file" description="输出文件类型ENVI、ERDAS、TIFF格式"/>
+    </Algo>
+</Configuration>

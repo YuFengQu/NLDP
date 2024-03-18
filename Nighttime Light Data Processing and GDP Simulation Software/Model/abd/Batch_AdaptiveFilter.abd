@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="Batch_AdaptiveFilter" library="Batch_AdaptiveFilter" paramCount="7" description="SAR自适应滤波">
+        <param index="0" name="AdaptiveFilterMethod" type="file" description="使用的滤波方法，以下字符串选择一个，Frost，EnFrost，Lee，EnLee，Kuan，Gamma" />
+        <param index="1" name="strSrcFileName" type="file" description="输入文件列表，多个文件以“|”间隔" />
+        <param index="2" name="m_filterSize" type="file" description="输入滤波窗口大小，一般输入3，5，7等奇数即可，最小是3"/>
+        <param index="3" name="m_damp" type="file" description="输入滤波系数-阻尼系数，一般输入1.0即可"/>
+		<param index="4" name="m_lNumberOfLook" type="file" description="输入视数，一般输入1即可"/>
+		<param index="5" name="m_EnumImageType" type="file" description="输入数据格式;以下字符串选择一个, Batch_AdaptiveFilter_Amplitude：幅度, Batch_AdaptiveFilter_Intensity：强度"/>
+		<param index="6" name="strSuffix" type="file" direction="1" description="输出影像后缀"/>
+		<param index="7" name="strOutputFileDir" type="double" direction="1" description="输出文件夹"/>
+        <param index="8" name="strFileTypeCode" type="double" direction="1" description="输出文件格式"/>
+    </Algo>
+</Configuration>

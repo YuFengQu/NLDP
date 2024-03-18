@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="Batch_SARGeocode" library="Batch_SARGeocode" paramCount="19" description="SAR地理编码">
+        <param index="0" name="strSrcFileName" type="file" description="输入文件列表，多个文件以“|”间隔" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="enGeocodeMode" type="file" direction="1" description="地理编码的方法" typeParam='{"GTC_Mode":"地形纠正地理编码", "GEC_Mode":"椭球体地理编码"}'/>
+        <param index="2" name="strInputDEM" type="file" direction="1" description="输入DEM"/>
+        <param index="3" name="strSuffix" type="file" direction="1" description="输出影像后缀"/>
+        <param index="4" name="strOutputFileDir" type="file" direction="1" description="输出文件夹"/>
+		<param index="5" name="strFileTypeCode" type="double" direction="1" description="输出文件格式"/>
+        <param index="6" name="dbExtraBourderLatLon" type="double" direction="1" description="DEM外扩范围"/>
+        <param index="7" name="dbMeanElevation" type="double" direction="1" description="平均高程"/>
+        <param index="8" name="dbXResolution" type="double" direction="1" description="X方向像元大小"/>
+		<param index="9" name="dbYResolution" type="double" description="Y方向像元大小" />
+        <param index="10" name="samplingInterval" type="int" direction="1" description="影像采样间隔（像素），仅当椭球体校正时可用"/>
+        <param index="11" name="enSampleMethod" type="file" direction="1" description="重采样方法，nearest, spline, cubic"/>
+        <param index="12" name="enGeoCoord" type="file" direction="1" description="输出坐标系，Geocode_WGS84, Geocode_UTM"/>
+        <param index="13" name="bSimulatedImage" type="bool" direction="1" description="是否输出模拟SAR影像"/>
+		<param index="14" name="bLocalIncidence" type="bool" direction="1" description="是否输出局部入射角" />
+        <param index="15" name="bProjectionAngle" type="bool" direction="1" description="是否输出投影角"/>
+        <param index="16" name="bReferIncidenceAngle" type="bool" direction="1" description="是否输出参考入射角"/>
+        <param index="17" name="bLayoverAndShadow" type="bool" direction="1" description="是否输出阴影文件"/>
+		<param index="18" name="bUseAffine" type="bool" direction="1" description="是否利用采样优化系数"/>
+    </Algo>
+</Configuration>

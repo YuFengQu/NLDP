@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="HysSpectralDifferential" library="" paramCount="2" description="光谱微分">
+        <param index="0" name="strInputFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff *.img);;All Files (*.*)"}'/>
+        <param index="1" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"GeoTiff Files (*.tif *.tiff)"}'/>
+		<param index="2" name="DifferentialType" type="int" description="微分类型"/>
+		<param index="3" name="m_Integer" type="int" description="整数阶微分阶次"/>
+		<param index="4" name="m_Differential" type="double" description="分数阶微分阶次"/>
+    </Algo>
+</Configuration>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="MSS_Export" library="SysAlgo_MltSclSgmnt" paramCount="6" description="导出分割矢量">
+        <param index="0" name="pszImgFilename" type="file" description="输入影像文件路径" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.img *.pix);;All Files (*.*)"}'/>
+        <param index="1" name="pszSegFilename" type="file" description="输入分割文件路径" typeParam='{"direction":"0", "filter":"ssl Files (*.ssl);;All Files (*.*)"}'/>
+        <param index="2" name="fScale" type="float" defaultValue="80" description="导出分割矢量尺度，范围0~100，默认为80，值越小矢量图斑越小，越大矢量图斑越大" />
+        <param index="3" name="dfNodata" type="float" description="输入影像背景值"/>
+        <param index="4" name="pszDstFilename" type="file" description="导出分割矢量路径，后缀名必须是*.shp" typeParam='{"direction":"1", "filter":"Raster Files (*.shp)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

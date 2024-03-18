@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Server Name="ArcGIS测试切片服务" Url="http://server.arcgisonline.com/arcgis/rest/services/ESRI_StreetMap_World_2D/MapServer/tile/[$Level]/[$Row]/[$Column]" ESPGCode="4326" Xmin="-180" XMax="180" YMin="-90" YMax="90" Level="16" TileWidth="512" Scale="1.47748799285417E8" Resolution="0.3515625" TileOriginX="-180" TileOriginY="90" />
+  <Server Name="谷歌测试服务" Url="http://mt2.google.cn/vt/lyrs=s@110&amp;hl=zh-CN&amp;gl=CN&amp;src=app&amp;x=[$Column]&amp;y=[$Row]&amp;z=[$Level]&amp;s=Ga" ESPGCode="3857" Xmin="-20037508.3427892" XMax="20037508.3427892" YMin="-20037508.3427893" YMax="20037508.3427892" Level="16" TileWidth="256" Scale="591658710.909131" Resolution="156543.033928041" TileOriginX="-20037508.3427892" TileOriginY="20037508.3427892" />
+  <Server Name="天地图在线地图服务" Url="https://t2.tianditu.gov.cn/DataServer?T=img_w&amp;x=[$Column]&amp;y=[$Row]&amp;l=[$Level]&amp;tk=8971e4c7b3640d506c2dc111221af6a0" ESPGCode="3857" Xmin="-20037508.3427892" XMax="20037508.3427892" YMin="-20037508.3427892" YMax="20037508.3427892" Level="16" TileWidth="256" Scale="591658710.909131" Resolution="156543.033928041" TileOriginX="-20037508.3427892" TileOriginY="20037508.3427892" />
+</Configuration>

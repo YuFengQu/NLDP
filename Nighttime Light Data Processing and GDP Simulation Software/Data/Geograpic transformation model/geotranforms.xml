@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pieGeoTransforms>
+	<GeoTransformsModel srccs="GCS_WGS_1984" destcs="GCS_Beijing_1954" modelname="GCS_WGS_1984-to-GCS_Beijing_1954-proj" dx="-15.8" dy="154.4" dz="82.3" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_WGS_1984" destcs="GCS_Beijing_1954" modelname="GCS_WGS_1984-to-GCS_Beijing_1954-1" dx="-19" dy="-112" dz="-55" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_WGS_1984" destcs="GCS_Beijing_1954" modelname="GCS_WGS_1984-to-GCS_Beijing_1954-2" dx="-4" dy="-104" dz="-45" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_WGS_1984" destcs="GCS_Beijing_1954" modelname="GCS_WGS_1984-to-GCS_Beijing_1954-3" dx="-15" dy="-120" dz="-48" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_WGS_1984" destcs="GCS_Beijing_1954" modelname="GCS_WGS_1984-to-GCS_Beijing_1954-4" dx="18" dy="-152" dz="-76" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_Beijing_1954" destcs="GCS_WGS_1984" modelname="GCS_Beijing_1954-to-GCS_WGS_1984-proj" dx="15.8" dy="-154.4" dz="-82.3" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_Beijing_1954" destcs="GCS_WGS_1984" modelname="GCS_Beijing_1954-to-GCS_WGS_1984-1" dx="19" dy="112" dz="55" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_Beijing_1954" destcs="GCS_WGS_1984" modelname="GCS_Beijing_1954-to-GCS_WGS_1984-2" dx="4" dy="104" dz="45" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_Beijing_1954" destcs="GCS_WGS_1984" modelname="GCS_Beijing_1954-to-GCS_WGS_1984-3" dx="15" dy="120" dz="48" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_Beijing_1954" destcs="GCS_WGS_1984" modelname="GCS_Beijing_1954-to-GCS_WGS_1984-4" dx="-18" dy="152" dz="76" ex="0" ey="0" ez="0" ppm="0.0" />
+	<GeoTransformsModel srccs="GCS_WGS_1984" destcs="GCS_WGS_1984_Major_Auxiliary_Sphere" modelname="GCS_WGS_1984-to-WGS_1984_WebMercator" dx="0.0" dy="0.0" dz="0.0" ex="0.0" ey="0.0" ez="0.0" ppm="0.0" />
+</pieGeoTransforms>

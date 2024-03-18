@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="GF5PreProcessing" library="GF5PreProcessing" paramCount="7" description="GF5预处理">
+        <param index="0" name="InputVNIRImg" type="file" description="VNIR影像数据"/>
+        <param index="1" name="InputSWIRImg" type="file" description="SWIR影像数据" />
+        <param index="2" name="VNIRWavelength" type="file" description="VNIR波长文件" />
+        <param index="3" name="SWIRWavelength" type="file" description="SWIR波长文件" />
+        <param index="4" name="isRemoveCoincidenceBand" type="enum" description="是否剔除重合波段"/>
+        <param index="5" name="isRemoveWVABand" type="enum" description="是否剔除水汽吸收波段" />
+        <param index="6" name="OutputFile" type="file" description="输出文件" />
+    </Algo>
+</Configuration>

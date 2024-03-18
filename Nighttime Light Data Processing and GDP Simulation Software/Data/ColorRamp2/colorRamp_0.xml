@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColorRamp ColorRampType="MultiPartColorRamp" SubColorRampCount="7">
+   <ColorRamp0 ColorRampType="Algorithmic" AlgorithmType="0" ToColor="255,255,179" FromColor="175,240,233"/>
+   <ColorRamp1 ColorRampType="Algorithmic" AlgorithmType="0" ToColor="0,128,64" FromColor="255,255,179"/>
+   <ColorRamp2 ColorRampType="Algorithmic" AlgorithmType="0" ToColor="252,186,3" FromColor="0,128,64"/>
+   <ColorRamp3 ColorRampType="Algorithmic" AlgorithmType="0" ToColor="128,0,0" FromColor="252,186,3"/>
+   <ColorRamp4 ColorRampType="Algorithmic" AlgorithmType="0" ToColor="105,48,13" FromColor="120,0,0"/>
+   <ColorRamp5 ColorRampType="Algorithmic" AlgorithmType="0" ToColor="171,171,171" FromColor="105,48,13"/>
+   <ColorRamp6 ColorRampType="Algorithmic" AlgorithmType="0" ToColor="255,252,255" FromColor="171,171,171"/>
+</ColorRamp>

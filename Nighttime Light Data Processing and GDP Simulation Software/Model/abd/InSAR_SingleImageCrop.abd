@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="InSAR_SingleImageCrop" library="InSAR_SingleImageCrop" paramCount="7" description="图像裁剪">
+        <param index="0" name="strSrcFileName" type="file" description="输入待裁剪影像"/>
+		<param index="1" name="m_iStartline" type="int" description="输入起始行"/>
+		<param index="2" name="m_iStartColumn" type="int" description="输入起始列"/>
+		<param index="3" name="m_iCroplines" type="int" description="输入裁剪行数"/>
+		<param index="4" name="m_iCropPixels" type="int" description="输入裁剪列数"/>
+		<param index="5" name="strFileTypeCode" type="file" description="输出文件数据类型" typeParam='{"ENVI":"img", "ERDAS":"img", "TIFF":"tif"}'/>
+		<param index="6" name="strOutputData" type="file" direction="1" description="输出目录"/>
+    </Algo>
+</Configuration>

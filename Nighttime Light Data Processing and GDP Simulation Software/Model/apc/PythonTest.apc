@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法 -->
+    <!-- type="normal|data|algo", default normal -->
+    <Algos>
+        <Algo name="PIECalibration">
+            <Parameter name="strInputFile" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.tiff"/>
+            <Parameter name="strXMLFile" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.xml"/>
+            <Parameter name="nCalibrationType"  value="200"/>
+            <Parameter name="strOutputFile" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.tiff"/>
+        </Algo>
+        <Algo name="AtmosphericCorrection">
+            <Parameter name="nDataType"  value="3"/>
+            <Parameter name="strInputFile" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.tiff"/>
+            <Parameter name="strInputXML" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.xml"/>
+            <Parameter name="nAtmModel" value="0"/>
+            <Parameter name="nAerosolType"  value="1"/>
+            <Parameter name="fInitialVIS"  value="40.0"/>
+            <Parameter name="nAeroRetrieval" value="1"/>
+            <Parameter name="strOutputSR" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.tiff"/>
+        </Algo>
+        <Algo name="PIEOrtho">
+            <Parameter index="0" name="strSrcFileName"  type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.tiff" />
+            <Parameter index="1" name="strRPCFileName"  type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.rpb" />
+            <Parameter index="2" name="strGcpFileName"  type="data" value="" />
+            <Parameter index="3" name="strOutputFile"  type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ortho.tif" />
+            <Parameter index="4" name="strDestWKT" value='GEOGCS[\\"WGS 84\\",DATUM[\\"WGS_1984\\",SPHEROID[\\"WGS 84\\",6378137,298.257223563, AUTHORITY[\\"EPSG\\",\\"7030\\"]], TOWGS84[0,0,0,0,0,0,0], AUTHORITY[\\"EPSG\\",\\"6326\\"]], PRIMEM[\\"Greenwich\\",0, AUTHORITY[\\"EPSG\\",\\"8901\\"]], UNIT[\\"degree\\",0.0174532925199433, AUTHORITY[\\"EPSG\\",\\"9108\\"]], AUTHORITY[\\"EPSG\\",\\"4326\\"]]'/>
+            <Parameter index="5" name="fConstDem" value="340" />
+            <Parameter index="6" name="strDemfile" type="data" value="" />
+            <Parameter index="7" name="lImageResampling" value="0" />
+            <Parameter index="8" name="fOutPixelX" value="0.000080" />
+            <Parameter index="9" name="fOutPixelY" value="0.000080" />
+        </Algo>
+        <Algo name="ImageClip">
+            <Parameter name="strInputFile" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ortho.tif"/>
+            <Parameter name="lXStart" value="0"/>
+            <Parameter name="lXEnd" value="6260"/>
+            <Parameter name="lYStart" value="0"/>
+            <Parameter name="lYEnd" value="4860"/>
+            <Parameter name="strShpFile" value=""/>
+            <Parameter name="strOutputFile" type="data" value="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ImageClip.tif"/>
+        </Algo>
+    </Algos>
+
+    <!-- 数据 -->
+    <Datas>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.tiff" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.tiff"/>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.xml" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.xml"/>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.tiff" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/ExportFile/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.tiff"/>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.xml" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/ExportFile/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.xml"/>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.tiff" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/ExportFile/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.tiff"/>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.rpb" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/ExportFile/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.rpb"/>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ortho.tif" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/ExportFile/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ortho.tif"/>
+        <Data name="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ImageClip.tif" path="F:/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600/ExportFile/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ImageClip.tif"/>
+    </Datas>
+
+    <!-- 依赖关系 -->
+    <Arrows>
+        <Arrow head="PIECalibration" headType="algo" headParam="strInputFile" tail="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.tiff" tailType="data" tailParam=""/>
+        <Arrow head="PIECalibration" headType="algo" headParam="strXMLFile" tail="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1.xml" tailType="data" tailParam=""/>
+        <Arrow head="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.tiff" headType="data" headParam="" tail="PIECalibration" tailType="algo" tailParam="strOutputFile"/>
+        <Arrow head="AtmosphericCorrection" headType="algo" headParam="strInputFile" tail="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.tiff" tailType="data" tailParam=""/>
+        <Arrow head="AtmosphericCorrection" headType="algo" headParam="strInputXML" tail="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Calibration.xml" tailType="data" tailParam=""/>
+        <Arrow head="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.tiff" headType="data" headParam="" tail="AtmosphericCorrection" tailType="algo" tailParam="strOutputSR"/>
+        <Arrow head="PIEOrtho" headType="algo" headParam="strSrcFileName" tail="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.tiff" tailType="data" tailParam=""/>
+        <Arrow head="PIEOrtho" headType="algo" headParam="strRPCFileName" tail="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-Atmospheric.rpb" tailType="data" tailParam=""/>
+        <Arrow head="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ortho.tiff" headType="data" headParam="" tail="PIEOrtho" tailType="algo" tailParam="strOutputFile"/>
+        <Arrow head="ImageClip" headType="algo" headParam="strInputFile" tail="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ortho.tiff" tailType="data" tailParam=""/>
+        <Arrow head="GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600-MSS1-ImageClip.tiff" headType="data" headParam="" tail="ImageClip" tailType="algo" tailParam="strOutputFile"/>
+    </Arrows>
+
+</Configuration>

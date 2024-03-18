@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="ThresholdSplit" library="ThresholdSplit" paramCount="4" description="阈值分割">
+        <param index="0" name="strInputFile" type="file" description="输入影像文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="nBandIndex" type="int" description="波段号（从0开始）" defaultValue="0" />
+        <param index="2" name="dThreshold" type="float" description="阈值" />
+        <param index="3" name="strOutputFile" type="file" direction="1" description="输出影像文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+
+</Configuration>

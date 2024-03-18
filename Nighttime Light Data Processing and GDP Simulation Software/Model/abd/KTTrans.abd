@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="KTTrans" library="PIETransformFunc" paramCount="3" description="缨帽变换">
+		<param index="0" name="InputFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+		<param index="1" name="OutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+		<param index="2" name="DataType" type="enum" typeParam='{"0":"Byte","1":"UInt16", "2":"Int16", "3":"UInt32", "4":"Int32", "5":"Float", "6":"Double"}' defaultValue="5" description="输出数据类型"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

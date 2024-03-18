@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="BandCombination" library="BandCombination" paramCount="4" description="波段合成">
+        <param index="0" name="InputFiles" type="multiFile" description="原栅格文件集"/>
+        <param index="1" name="InputBands" type="select" description="选择需要合并的波段"/>
+        <param index="2" name="OutputType" type="select" description="输出方式"/>
+        <param index="3" name="OutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+    </Algo>
+</Configuration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="BuildGLT" library="BuildGLT" paramCount="4" description="构建GLT">
+        <param index="0" name="strInputFile" type="file" description="输入MOD03文件" typeParam='{"direction":"0", "filter":"MOD03 Files (*.hdf);;All Files (*.*)"}'/>
+        <param index="1" name="strLonMark" type="string" description="经度子数据集" defaultValue="Longitude"/>
+        <param index="2" name="strLatMark" type="string" description="纬度子数据集" defaultValue="Latitude"/> 
+        <param index="3" name="strOutputFile" type="file" direction="1" description="输出glt文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

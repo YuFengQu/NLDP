@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="HysOrthorectification" library="HysOrthorectification" paramCount="10" description="GF5正射校正">
+        <param index="0" name="InputGF5PreImg" type="file" description="输入影像"/>
+        <param index="1" name="InputRPCFile" type="file" description="输入rpc文件" />
+        <param index="2" name="InputGCPFile" type="file" description="输入控制点文件" />
+        <param index="3" name="InputDemFile" type="file" description="输入DEM文件" />
+        <param index="4" name="DestWKT" type="enum" description="输入空间参考"/>
+        <param index="5" name="OutputFile" type="enum" description="输出影像" />
+        <param index="6" name="constDEM" type="file" description="DEM常值" />
+        <param index="7" name="XPixel" type="file" description="x方向分辨率" />
+        <param index="8" name="YPixel" type="file" description="y方向分辨率" />
+        <param index="9" name="ResampleType" type="file" description="重采样类型" />
+    </Algo>
+</Configuration>

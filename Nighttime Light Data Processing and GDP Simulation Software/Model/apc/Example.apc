@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<Configuration>
+    <!--算法-->
+    <Processes>
+        <Process class="RasterFileIterator" name="{fb2b2394-b5bb-4363-aa4c-cda2ec727f76}" description="栅格文件迭代器" posX="-272.224" posY="-122.25" painter="{&quot;points&quot;:[&quot;{&quot;x&quot;:&quot;-25.000000&quot;, &quot;y&quot;:&quot;-50.000000&quot;},{&quot;x&quot;:&quot;25.000000&quot;, &quot;y&quot;:&quot;-50.000000&quot;},{&quot;x&quot;:&quot;50.000000&quot;, &quot;y&quot;:&quot;0.000000&quot;},{&quot;x&quot;:&quot;25.000000&quot;, &quot;y&quot;:&quot;50.000000&quot;},{&quot;x&quot;:&quot;-25.000000&quot;, &quot;y&quot;:&quot;50.000000&quot;},{&quot;x&quot;:&quot;-50.000000&quot;, &quot;y&quot;:&quot;0.000000&quot;},{&quot;x&quot;:&quot;-25.000000&quot;, &quot;y&quot;:&quot;-50.000000&quot;}&quot;]}" processName="">
+            <Parameter name="strDir" type="string" direction="0" value="G:/work/work2015/data/gaofen/GF1_PMS1_E116.5_N39.4_20131127_L1A0000117600" description="Directory"/>
+            <Parameter name="strFileName" type="file" direction="1" value="%{fdce4035-fb2f-4716-a90f-31ee2e7461d0}%" description="Output file"/>
+        </Process>
+        <Process class="algo" name="{3bdb6ec1-b11c-461b-832b-98805c14632a}" description="辐射定标" posX="-271.768" posY="53.4625" painter="{&quot;width&quot;:&quot;100&quot;, &quot;height&quot;:&quot;100&quot;}" processName="PIECalibration">
+            <Parameter name="strInputFile" type="file" direction="0" value="%{fdce4035-fb2f-4716-a90f-31ee2e7461d0}%" description="输入文件"/>
+            <Parameter name="strXMLFile" type="file" direction="0" value="%{03721400-a292-4dfd-aab4-f6efe5b53f01}%" description="元数据文件"/>
+            <Parameter name="nCalibrationType" type="int" direction="0" value="200" description="定标类型"/>
+            <Parameter name="strOutputFile" type="file" direction="1" value="%{f2480a09-1956-46cf-8183-8e0d7df53e02}%" description="输出文件"/>
+        </Process>
+        <Process class="algo" name="{88fb35a9-b152-4372-88f5-b25b0a58017e}" description="大气校正" posX="-267.499" posY="255.872" painter="{&quot;width&quot;:&quot;100.000000&quot;, &quot;height&quot;:&quot;100.000000&quot;}" processName="AtmosphericCorrection">
+            <Parameter name="nDataType" type="int" direction="0" value="1" description="数据类型"/>
+            <Parameter name="strInputFile" type="file" direction="0" value="%{f2480a09-1956-46cf-8183-8e0d7df53e02}%" description="输入文件"/>
+            <Parameter name="strInputXML" type="file" direction="0" value="%{67dd4543-b854-4fac-88fc-3d2d7d37df97}%" description="元数据文件"/>
+            <Parameter name="nAtmModel" type="int" direction="0" value="0" description="大气模式"/>
+            <Parameter name="nAerosolType" type="int" direction="0" value="1" description="气溶胶类型"/>
+            <Parameter name="fInitialVIS" type="float" direction="0" value="40.0" description="初始能见度"/>
+            <Parameter name="nAeroRetrieval" type="int" direction="0" value="1" description="是否反演气溶胶"/>
+            <Parameter name="strOutputSR" type="file" direction="1" value="%{93280d6a-0fab-4365-93f5-d9f716380c4a}%" description="输出文件"/>
+        </Process>
+        <Process class="algo" name="{3a955322-415e-46f3-81f8-43d12a8dcd21}" description="正射校正" posX="-268.682" posY="449.077" painter="{&quot;width&quot;:&quot;100.000000&quot;, &quot;height&quot;:&quot;100.000000&quot;}" processName="PIEOrtho">
+            <Parameter name="strSrcFileName" type="file" direction="0" value="%{93280d6a-0fab-4365-93f5-d9f716380c4a}%" description="输入文件"/>
+            <Parameter name="strRPCFileName" type="file" direction="0" value="%{f5a6eb15-002d-48c2-9731-355dfe21312e}%" description="RPC文件"/>
+            <Parameter name="strGcpFileName" type="file" direction="0" value="" description="控制点文件"/>
+            <Parameter name="strOutputFile" type="file" direction="1" value="%{da83d3ef-923a-4926-9a67-8cf54585b17d}%" description="输出文件"/>
+            <Parameter name="strDestWKT" type="string" direction="0" value="GEOGCS[&quot;GCS_WGS_1984&quot;,&#10;    DATUM[&quot;D_WGS_1984&quot;,&#10;        SPHEROID[&quot;WGS_1984&quot;,6378137,298.257223563]],&#10;    PRIMEM[&quot;Greenwich&quot;,0],&#10;    UNIT[&quot;Degree&quot;,0.017453292519943295]]" description="投影设置"/>
+            <Parameter name="fConstDem" type="long" direction="0" value="340" description="高程常值"/>
+            <Parameter name="strDemfile" type="file" direction="0" value="" description="dem影像"/>
+            <Parameter name="lImageResampling" type="long" direction="0" value="0" description="重采样类型"/>
+            <Parameter name="fOutPixelX" type="float" direction="0" value="0.000080" description="X分辨率"/>
+            <Parameter name="fOutPixelY" type="float" direction="0" value="0.000080" description="Y分辨率"/>
+        </Process>
+        <Process class="algo" name="{1675d6ba-2c24-444a-85c7-2048408df0d5}" description="图像裁剪" posX="-265.954" posY="628.71" painter="{&quot;width&quot;:&quot;100.000000&quot;, &quot;height&quot;:&quot;100.000000&quot;}" processName="ImageClip">
+            <Parameter name="strInputFile" type="file" direction="0" value="%{da83d3ef-923a-4926-9a67-8cf54585b17d}%" description="输入文件"/>
+            <Parameter name="lXStart" type="long" direction="0" value="0" description="X开始点"/>
+            <Parameter name="lXEnd" type="string" direction="0" value="6260" description="X结束点"/>
+            <Parameter name="lYStart" type="string" direction="0" value="0" description="Y开始点"/>
+            <Parameter name="lYEnd" type="long" direction="0" value="4860" description="Y开始点"/>
+            <Parameter name="strShpFile" type="file" direction="0" value="" description="矢量文件"/>
+            <Parameter name="strOutputFile" type="file" direction="1" value="%{15d60959-7af8-4a88-84a2-8cd29cbe9d39}%" description="输出文件"/>
+        </Process>
+    </Processes>
+    <!--数据-->
+    <Vars>
+        <Var class="file" name="{fdce4035-fb2f-4716-a90f-31ee2e7461d0}" description="Output file" posX="-81.75" posY="-50.25" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp=""/>
+        <Var class="file" name="{03721400-a292-4dfd-aab4-f6efe5b53f01}" description="元数据文件" posX="-475.62" posY="52.613" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp="$ReplaceExtension(%{fdce4035-fb2f-4716-a90f-31ee2e7461d0}%, 'xml')"/>
+        <Var class="file" name="{f2480a09-1956-46cf-8183-8e0d7df53e02}" description="辐射定标文件(*.tiff)" posX="-69.15" posY="140.634" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%{fdce4035-fb2f-4716-a90f-31ee2e7461d0}%, '_Calibration'), 'temp')"/>
+        <Var class="file" name="{67dd4543-b854-4fac-88fc-3d2d7d37df97}" description="辐射定标文件(*.xml)" posX="-484.472" posY="254.169" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp="$ReplaceExtension(%{f2480a09-1956-46cf-8183-8e0d7df53e02}%, 'xml')"/>
+        <Var class="file" name="{93280d6a-0fab-4365-93f5-d9f716380c4a}" description="大气校正文件(*.tiff)" posX="-66.569" posY="346.804" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%{fdce4035-fb2f-4716-a90f-31ee2e7461d0}%, '_Atmospheric'), 'temp')"/>
+        <Var class="file" name="{f5a6eb15-002d-48c2-9731-355dfe21312e}" description="大气校正文件(*.rpb)" posX="-491.63" posY="450.206" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp="$ReplaceExtension(%{93280d6a-0fab-4365-93f5-d9f716380c4a}%, 'rpb')"/>
+        <Var class="file" name="{da83d3ef-923a-4926-9a67-8cf54585b17d}" description="正射校正文件(*.tiff)" posX="-64.63" posY="574.206" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%{fdce4035-fb2f-4716-a90f-31ee2e7461d0}%, '_ortho'), 'temp')"/>
+        <Var class="file" name="{15d60959-7af8-4a88-84a2-8cd29cbe9d39}" description="图像裁剪文件(*.tiff)" posX="-260.61" posY="773.53" painter="{&quot;width&quot;:&quot;150.000000&quot;, &quot;height&quot;:&quot;75.000000&quot;}" constant="0" funExp="$SubDirectory($AppendSuffix(%{fdce4035-fb2f-4716-a90f-31ee2e7461d0}%, '_ImageClip'), 'temp')"/>
+    </Vars>
+    <!--依赖关系-->
+    <Arrows>
+        <Arrow head="{3bdb6ec1-b11c-461b-832b-98805c14632a}" headType="process" headParam="strXMLFile" tail="{03721400-a292-4dfd-aab4-f6efe5b53f01}" tailType="var" tailParam="" class="arrow" name="{5d6d7a5d-7fc4-4765-a309-486599a0e972}" posX="0" posY="0" painter=""/>
+        <Arrow head="{f2480a09-1956-46cf-8183-8e0d7df53e02}" headType="var" headParam="" tail="{3bdb6ec1-b11c-461b-832b-98805c14632a}" tailType="process" tailParam="strOutputFile" class="arrow" name="{8dd555e1-a56d-4bd4-93d4-3af1055e532c}" posX="0" posY="0" painter=""/>
+        <Arrow head="{88fb35a9-b152-4372-88f5-b25b0a58017e}" headType="process" headParam="strInputXML" tail="{67dd4543-b854-4fac-88fc-3d2d7d37df97}" tailType="var" tailParam="" class="arrow" name="{0eb01e9e-2757-48af-b489-bbf841803a5d}" posX="0" posY="0" painter=""/>
+        <Arrow head="{93280d6a-0fab-4365-93f5-d9f716380c4a}" headType="var" headParam="" tail="{88fb35a9-b152-4372-88f5-b25b0a58017e}" tailType="process" tailParam="strOutputSR" class="arrow" name="{9a4f663e-0e3a-4b7d-b8aa-1ea4814f4c61}" posX="0" posY="0" painter=""/>
+        <Arrow head="{3a955322-415e-46f3-81f8-43d12a8dcd21}" headType="process" headParam="strRPCFileName" tail="{f5a6eb15-002d-48c2-9731-355dfe21312e}" tailType="var" tailParam="" class="arrow" name="{724e20c3-ec4b-47b6-8550-ac031930915f}" posX="0" posY="0" painter=""/>
+        <Arrow head="{da83d3ef-923a-4926-9a67-8cf54585b17d}" headType="var" headParam="" tail="{3a955322-415e-46f3-81f8-43d12a8dcd21}" tailType="process" tailParam="strOutputFile" class="arrow" name="{16165a76-ca92-4f79-9922-68610d055895}" posX="0" posY="0" painter=""/>
+        <Arrow head="{15d60959-7af8-4a88-84a2-8cd29cbe9d39}" headType="var" headParam="" tail="{1675d6ba-2c24-444a-85c7-2048408df0d5}" tailType="process" tailParam="strOutputFile" class="arrow" name="{32ca8f8f-7571-4792-8ffb-934e3c6fd0e1}" posX="0" posY="0" painter=""/>
+        <Arrow head="{88fb35a9-b152-4372-88f5-b25b0a58017e}" headType="process" headParam="strInputFile" tail="{f2480a09-1956-46cf-8183-8e0d7df53e02}" tailType="var" tailParam="" class="arrow" name="{7e4555a3-e8cc-48d0-9f63-c5cc2f831cc2}" posX="0" posY="0" painter=""/>
+        <Arrow head="{3a955322-415e-46f3-81f8-43d12a8dcd21}" headType="process" headParam="strSrcFileName" tail="{93280d6a-0fab-4365-93f5-d9f716380c4a}" tailType="var" tailParam="" class="arrow" name="{2f81f396-b494-42e3-9bbd-36970ff3d8b1}" posX="0" posY="0" painter=""/>
+        <Arrow head="{1675d6ba-2c24-444a-85c7-2048408df0d5}" headType="process" headParam="strInputFile" tail="{da83d3ef-923a-4926-9a67-8cf54585b17d}" tailType="var" tailParam="" class="arrow" name="{f1540cf5-f062-4bff-ae33-733ffddb82a9}" posX="0" posY="0" painter=""/>
+        <Arrow head="{fdce4035-fb2f-4716-a90f-31ee2e7461d0}" headType="var" headParam="" tail="{fb2b2394-b5bb-4363-aa4c-cda2ec727f76}" tailType="process" tailParam="strFileName" class="arrow" name="{e89c844d-466c-443f-add8-a34da9e0cf18}" posX="0" posY="0" painter=""/>
+        <Arrow head="{3bdb6ec1-b11c-461b-832b-98805c14632a}" headType="process" headParam="strInputFile" tail="{fdce4035-fb2f-4716-a90f-31ee2e7461d0}" tailType="var" tailParam="" class="arrow" name="{844f2d4e-5ce9-4401-a2f8-3bc8103df5cf}" posX="0" posY="0" painter=""/>
+    </Arrows>
+</Configuration>

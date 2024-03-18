@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="RD_GenerateRPC" library="RD_GenerateRPC" paramCount="10" description="GF3轮廓矢量提取">
+        <param index="0" name="strSrcFilePath" type="file" description="输入目录"/>
+		<param index="1" name="strDemFile" type="file" description="输入DEM"/>
+		<param index="2" name="evelationFlag" type="file" description="高程范围获取文件"/>
+		<param index="3" name="minElevationValue" type="float" description="输入最小高程值"/>
+		<param index="4" name="maxElevationValue" type="float" description="输入最大高程值"/>
+		<param index="5" name="RowSpacing" type="int" description="输入虚拟控制点行间隔"/>
+		<param index="6" name="ColumnSpacing" type="int" description="输入虚拟控制点列间隔"/>
+		<param index="7" name="layerNum" type="int" description="输入虚拟控制点层数"/>
+        <param index="8" name="rpcSuffix" type="file" description="输出文件名后缀" typeParam='{"AsteriskDotRpc":"rpc", "AsteriskUnderlineRpcDotTxt":"txt", "AsteriskDotRpb":"rpb"}'/>
+        <param index="9" name="strOutDir" type="file" description="输出目录" />
+    </Algo>
+</Configuration>

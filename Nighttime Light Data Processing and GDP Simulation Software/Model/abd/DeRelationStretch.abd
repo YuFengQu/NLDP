@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="DeRelationStretch" library="DeRelationStretch" paramCount="2" description="去相关拉伸">
+        <param index="0" name="strIputFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"GeoTIFF Files (*.tif *.tiff);;ERDAS IMG(*.img);;ENVI IMG(*.img)"}'/>
+    </Algo>
+</Configuration>

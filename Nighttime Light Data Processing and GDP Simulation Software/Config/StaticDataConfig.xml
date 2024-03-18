@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration> 
+	 <Satellite Name="FY4A-500" NOMCenterLon="104.7" DefaultResolution="500">		 
+	 </Satellite>
+	 <Satellite Name="FY4A-1000" NOMCenterLon="104.7" DefaultResolution="1000">		 
+	 </Satellite>
+	 <Satellite Name="FY4A-2000" NOMCenterLon="104.7" DefaultResolution="2000">		 
+	 </Satellite>
+	 <Satellite Name="FY4A-4000" NOMCenterLon="104.7" DefaultResolution="4000">		 
+	 </Satellite>
+	 <Satellite Name="FY2E" NOMCenterLon="104.5" DefaultResolution="5000">		   	  
+		<Channel Name="NOMChannelVIS1KM" Resolution="1250"/>		  
+	 </Satellite>
+	 <Satellite Name="FY2F" NOMCenterLon="112" DefaultResolution="5000">	 
+		<Channel Name="NOMChannelVIS1KM" Resolution="1250"/>			 
+	 </Satellite>
+	 <Satellite Name="FY2G" NOMCenterLon="104.5" DefaultResolution="5000">  
+		<Channel Name="NOMChannelVIS1KM" Resolution="1250"/>		 		 
+	 </Satellite>
+	 <Satellite Name="AHI8" NOMCenterLon="140" DefaultResolution="2000">	  	 
+	 </Satellite>	 
+</Configuration>
+
+ 

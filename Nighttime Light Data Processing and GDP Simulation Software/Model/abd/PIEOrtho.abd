@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="PIEOrtho" library="PIEOrtho" paramCount="5" description="正射校正">
+        <param index="0" name="InputIMGFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="InputRPCFile" type="file" description="RPC文件"/>    
+        <param index="2" name="InputGCPFile" type="file" isNull="1" description="控制点文件"/>                   
+        <param index="3" name="OutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+        <param index="4" name="DestWKT" type="spatialReference" defaultValue="GEOGCS[&quot;GCS_WGS_1984&quot;,&#10;    DATUM[&quot;D_WGS_1984&quot;,&#10;        SPHEROID[&quot;WGS_1984&quot;,6378137,298.257223563]],&#10;    PRIMEM[&quot;Greenwich&quot;,0],&#10;    UNIT[&quot;Degree&quot;,0.017453292519943295]]" description="投影设置"/>        
+        <param index="5" name="ConstDem" type="long" defaultValue="340" description="高程常值"/>      
+        <param index="6" name="InputDEMFile" type="file" isNull="1" description="dem影像"/>
+        <param index="7" name="ResamplType" type="enum" typeParam='{"0":"最近邻域法", "1":"双线性插值法", "2":"三次卷积法"}' defaultValue="0" description="重采样类型"/>
+        <param index="8" name="OutPixelX" type="float" defaultValue="0.000080" description="X分辨率"/>
+        <param index="9" name="OutPixelY" type="float" defaultValue="0.000080" description="Y分辨率"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

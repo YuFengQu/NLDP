@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="HyspecPrePro" library="HyspecPrePro" paramCount="3" description="去除坏线条带">
+        <param index="0" name="strInputFile" type="file" description="任意波段文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="strMetaFile" type="file" description="元数据文件" typeParam='{"direction":"0", "filter":"Raster Files (*.prj);;All Files (*.*)"}'/>
+        <param index="2" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+    </Algo>
+</Configuration>

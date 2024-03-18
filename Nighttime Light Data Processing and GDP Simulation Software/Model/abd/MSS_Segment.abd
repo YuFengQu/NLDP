@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="MSS_Segment" library="SysAlgo_MltSclSgmnt" paramCount="10" description="影像分割">
+        <param index="0" name="pszImgFilename" type="file" description="输入影像文件路径" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.img *.pix);;All Files (*.*)"}'/>
+        <param index="1" name="pszSegFilename" type="file" description="输出分割文件路径" typeParam='{"direction":"1", "filter":"ssl Files (*.sll);;All Files (*.*)"}'/>
+        <param index="2" name="nInitType" type="enum" typeParam='{"0":"pairwise_connection", "1":"pairwise_similarity", "2":"分水岭算法", "3":"最优邻算法", "4":"图割算法"}' defaultValue="2" description="分割算法"/>
+        <param index="3" name="thrd_dist" type="float" defaultValue="5" description="初始分割参数，距离阈值" />
+        <param index="4" name="thrd_size" type="int" defaultValue="10" description="最小图斑像元个数"/>
+	  <param index="5" name="fLevelMinsize" type="float" description="从低尺度到高尺度链接的平均区域尺寸，50~100" />
+	  <param index="6" name="shape" type="float" defaultValue="0.3" description="形状因子权重，用于控制分割质量，0~1" />
+	  <param index="7" name="compact" type="float" defaultValue="0.1" description="紧致度权重，用于控制分割质量，0~1" />
+	  <param index="8" name="edge" type="float" defaultValue="0.5" description="边缘强度权重，用于控制分割质量，0~1" />
+        <param index="9" name="feature" type="enum" typeParam='{"0":"光谱标准差", "1":"光谱均值", "2":"光谱直方图", "3":"光谱纹理", "4":"标准差纹理", "5":"纹理"}' defaultValue="0" description="合并规则" />
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

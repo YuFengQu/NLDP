@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="ImgProFiltCustom" library="ImgProFiltCustom" paramCount="6" description="自定义滤波算法">
+        <param index="0" name="strSrcFileName" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff)"}'/>
+        <param index="1" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>        
+        <param index="2" name="seleceBand" type="string" description="选择的波段"/> 
+        <param index="3" name="pixelDataType" type="enum" typeParam='{"0":"字节型(8位)", "1":"整型(16位)", "2":"无符号整型(16位)", "3":"长整型(32位)", "4":"无符号长整型(32位)", "5":"浮点型(32位)", "6":"双精度浮点型(64位)"}' defaultValue="5" description="输出的像元类型"/>
+        <param index="4" name="fiterSize" type="long" description="自定义滤波大小"/>
+        <param index="5" name="fiterArray" type="string" defaultValue="2" description="自定义滤波数组"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

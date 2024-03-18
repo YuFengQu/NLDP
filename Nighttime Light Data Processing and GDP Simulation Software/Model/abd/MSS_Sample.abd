@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="MSS_Sample" library="SysAlgo_MltSclSgmnt" paramCount="9" description="自动样本选择">
+        <param index="0" name="pszImgFilename" type="file" description="输入影像文件路径，" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.img *.pix);;All Files (*.*)"}'/>
+        <param index="1" name="pszSegFilename" type="file" description="输入分割文件路径" typeParam='{"direction":"0", "filter":"Raster Files (*.shp);;All Files (*.*)"}'/>
+        <param index="2" name="pszClsFilename" type="file" description="输入分类文件路径" typeParam='{"direction":"0", "filter":"Raster Files (*.shp);;All Files (*.*)"}'/>
+        <param index="3" name="pszDstFilename" type="file" description="输出样本矢量路径" typeParam='{"direction":"1", "filter":"Raster Files (*.sll);;All Files (*.*)"}'/>
+        <param index="4" name="pszFieldId" type="string" description="输入分类文件中类别ID字段名，默认ClassID"/>
+        <param index="5" name="pszFiledName" type="string" description="输入分类文件中类别名称字段名，默认ClassName"/>
+	  <param index="6" name="dfPercent" type="float" defaultValue="30" description="设置各类别面积升序排列前百分比，0~100，默认30" />
+	  <param index="7" name="dfBuffer" type="float" defaultValue="10" description="设置向内缓冲距离，单位米，默认10" />
+        <param index="8" name="nMaxCount" type="int" defaultValue="400" description="设置各个类别样本保留最大样本数，默认400"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

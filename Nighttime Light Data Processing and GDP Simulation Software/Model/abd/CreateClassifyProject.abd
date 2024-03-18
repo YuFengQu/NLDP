@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="CreateClassifyProject" library="SysAlgo_MltSclSgmnt" paramCount="8" description="创建分类工程">
+        <param index="0" name="fullPath" type="string" description="工程全路径"/>
+        <param index="1" name="inFileList" type="string" description="待分类影像文件列表， | 竖线分割"/>
+        <param index="2" name="typeName" type="string" description="分割算法 分水岭算法':'watershed','最优领算法':'best-neighbors','图割算法':'graph-based'  默认值 graph-based" />
+	  <param index="3" name="featureName" type="string" description="合并规则 'Baatz-Schape':'Baatz-Schape','Baatz-Schape-LBP':'Baatz-Schape-LBP','Full-Lambda':'Full-Lambda','Color-Histogram':'Color-Histogram','Color-Texture':'Color-Texture'  默认值 Baatz-Schape" />
+        <param index="4" name="shape" type="float" description="形状因子权重 默认值 0.3"/>
+        <param index="5" name="edge" type="float" description="边界强度 默认值 0.5"/>
+        <param index="6" name="compact" type="float" description="紧致度权重 默认值 0.1"/>
+        <param index="7" name="savr" type="float" description="合并区域尺寸 默认值 100.00"/>
+    </Algo>
+</Configuration>

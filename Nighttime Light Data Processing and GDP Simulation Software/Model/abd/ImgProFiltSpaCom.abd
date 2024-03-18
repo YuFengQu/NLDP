@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="ImgProFiltSpaCom" library="ImgProFiltSpa" paramCount="5" description="通用滤波">
+        <param index="0" name="strSrcFileName" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff)"}'/>
+        <param index="1" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+        <param index="2" name="fiterCommonType" type="enum" typeParam='{"0":"高通边缘检测滤波 3×3", "1":"高通边缘增强滤波 3×3", "2":"低通滤波 3×3", "3":"高通滤波 3×3", "4":"水平滤波 3×3", "5":"垂直滤波 3×3", "6":"快速滤波 3×3", "7":"拉普拉斯1滤波 3×3", "8":"拉普拉斯2滤波 3×3", "9":"高通边缘检测滤波 5×5", "10":"高通边缘增强滤波 5×5", "11":"低通滤波 5×5", "12":"高通滤波 5×5", "13":"水平滤波 5×5", "14":"垂直滤波 5×5", "15":"快速滤波 5×5", "16":"高通边缘检测滤波 7×7", "17":"高通边缘增强滤波 7×7", "18":"低通滤波 7×7", "19":"高通滤波 7×7", "20":"水平滤波 7×7", "21":"垂直滤波 7×7", "22":"快速滤波 7×7"}' defaultValue="0" description="滤波类型"/>
+        <param index="3" name="seleceBand" type="string" description="选择的波段"/> 
+        <param index="4" name="pixelDataType" type="enum" typeParam='{"0":"字节型(8位)", "1":"整型(16位)", "2":"无符号整型(16位)", "3":"长整型(32位)", "4":"无符号长整型(32位)", "5":"浮点型(32位)", "6":"双精度浮点型(64位)"}' defaultValue="5" description="输出的像元类型"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

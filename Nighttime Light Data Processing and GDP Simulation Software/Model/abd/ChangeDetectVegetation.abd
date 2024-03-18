@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="ChangeDetectVegetation" library="ChangeDetectVegetation" paramCount="4" description="变化检测">
+        <param index="0" name="strEarlyRSFile" type="file" description="前期遥感影像"/>
+        <param index="1" name="strPostRSFile" type="file" description="后期遥感影像"/>
+        <param index="2" name="strOutputFile" type="file" direction="1" description="结果文件" typeParam='{"direction":"1", "filter":"Shape Files (*.shp)"}'/>
+        <param index="3" name="fGreenAreaMin" type="float" description="绿化工程区最小面积"/>
+    </Algo>
+</Configuration>

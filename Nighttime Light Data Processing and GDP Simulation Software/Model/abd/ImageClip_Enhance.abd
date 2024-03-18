@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    
+    <!-- 算法描述 -->
+    <Algo name="ImageClip_Enhance" library="ImageClip" paramCount="5" description="图像裁剪">
+        <param index="0" name="InputIMGFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="ClipRange" type="string" defaultValue="" description="X开始点"/>
+        <param index="2" name="InputSHPFile" type="string" defaultValue="" description="矢量文件"/>
+        <param index="3" name="InputFieldName" type="string" defaultValue="0" description="矢量文件"/>
+        <param index="4" name="InputFieldValue" type="string" defaultValue="4860" description="矢量文件"/>
+        <param index="5" name="BufferDistance" type="int" isNull="1" description="矢量文件"/>
+	  <param index="6" name="ClipType" type="int" isNull="1" description="矢量文件"/>
+        <param index="7" name="OutputFile" type="string" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

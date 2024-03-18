@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="Batch_MultiLook" library="Batch_MultiLook" paramCount="9" description="SAR多视处理">
+        <param index="0" name="strSrcFileName" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="outMultiMode" type="file" direction="1" description="多视的方法" typeParam='{"Batch_MultiCustomLooks":"自定义视数", "Batch_MultiCartoGridSize":"输出指定格网大小"}'/>
+        <param index="2" name="aziMultiLookNum" type="int" direction="1" description="输入方位向视数"/>
+        <param index="3" name="rngMultiLookNum" type="int" direction="1" description="输入距离向视数"/>
+        <param index="4" name="cartoGridSize" type="float" direction="1" description="输出网格大小"/>
+		<param index="5" name="outMultiType" type="file" direction="1" description="多视输出类型" typeParam='{"Batch_MultiComplex":"输出多视复数", "Batch_MultiAmplitude":"输出多视幅度"}'/>
+        <param index="6" name="strSuffix" type="file" direction="1" description="输出影像后缀"/>
+        <param index="7" name="strOutputFileDir" type="file" direction="1" description="输出文件夹"/>
+        <param index="8" name="strFileTypeCode" type="file" direction="1" description="输出文件格式"/>
+    </Algo>
+</Configuration>

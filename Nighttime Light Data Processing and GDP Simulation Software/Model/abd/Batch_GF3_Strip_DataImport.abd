@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+    <!-- 算法描述 -->
+    <Algo name="Batch_GF3_Strip_DataImport" library="Batch_GF3_Strip_DataImport" paramCount="7" description="高分三号条带模式批量导入">
+        <param index="0" name="strSrcFilePath" type="file" description="输入文件夹" />
+        <param index="1" name="strProductLevel" type="file" direction="1" description="产品级别" typeParam='{"L1A":"L1A", "L1B":"L1B"}'/>
+        <param index="2" name="strImagingModeType" type="file" direction="1" description="成像模式" typeParam='{"SL":"SL", "UFS":"UFS","FSI":"FSI", "FSII":"FSII", "QPSI":"QPSI", "QPSII":"QPSII"}'/>
+        <param index="3" name="strPolType" type="file" direction="1" description="极化类型"/>
+        <param index="4" name="strOutFilePrefixType" type="file" direction="1" description="输出影像前缀命名方式"/>
+		<param index="5" name="strOutputFileDir" type="double" direction="1" description="输出文件夹"/>
+        <param index="6" name="strFileTypeCode" type="double" direction="1" description="输出文件格式"/>
+    </Algo>
+</Configuration>

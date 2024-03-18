@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="TerrainRadiometricCorrection" library="TerrainRadiometricCorrection" paramCount="9" description="地形辐射校正">
+        <param index="0" name="strSrcFileName" type="file" description="输入地理编码后影像"/>
+		<param index="1" name="strReferIncidenceAngleData" type="file" description="输入参考入射角影像"/>
+		<param index="2" name="strLocalIncidenceAngleData" type="file" description="输出局部入射角影像"/>
+		<param index="3" name="strProjectionAngleData" type="file" description="输入投影角影像"/>
+		<param index="4" name="enCorrectionMethod" type="file" description="输入校正方法" typeParam='{"LocalIncidenceAngleCorrection":"局部入射角校正法", "ProjectionAngleCorrection":"投影入射角校正法"}'/>
+		<param index="5" name="enDataType" type="file" description="输入数据类型" typeParam='{"TRC_Intensity，":"强度", "TRC_Amplitude":"幅度"}'/>
+		<param index="6" name="strFileTypeCode" type="file" description="输出文件数据类型" typeParam='{"ENVI":"img", "ERDAS":"img", "TIFF":"tif"}'/>
+		<param index="7" name="strOutDir" type="file" direction="1" description="输出目录"/>
+    </Algo>
+</Configuration>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<Configuration>
+    <ToolBox name="PIEToolBox">
+        <Group name="算法工具集">
+            <Group name="图像预处理">
+                <Group name="辐射校正">
+                    <Algo name="辐射定标" metadata="Calibration" description=""/>
+                    <Algo name="大气校正" metadata="AtmosphericCorrection" description=""/>
+                </Group>
+                <Group name="几何校正">
+                    <Algo name="影像匹配" metadata="PIEMatch" description=""/>
+                    <Algo name="正射校正" metadata="PIEOrtho" description=""/>
+                </Group>
+                <Group name="图像融合">
+                    <Algo name="Pansharp融合" metadata="PansharpFuseAlg" description=""/>
+                </Group>
+                <Group name="图像裁剪">
+                    <Algo name="图像裁剪" metadata="ImageClip" description=""/>
+                </Group>
+            </Group>
+            <Group name="图像处理">
+                <Group name="图像变换">
+                    <Algo name="小波正变换" metadata="WaveletTransform" description=""/>
+                    <Algo name="小波逆变换" metadata="WaveletInverseTransform" description=""/>
+                    <Algo name="去相关拉伸" metadata="DeRelationStretch" description=""/>
+                </Group>
+            </Group>
+            <Group name="基础工具">
+                <Group name="格式转换">
+                    <Algo name="存储格式转换" metadata="UtilityFormTran" description=""/>
+                    <Algo name="位深转换" metadata="UtilityBitDepthTrans" description=""/>
+                </Group>
+                <Group name="投影变换">
+                    <Algo name="投影转换" metadata="ProjectTrans" description=""/>
+                    <Algo name="投影定义" metadata="ProjectDef" description=""/>
+                </Group>
+                <Group name="掩膜工具">
+                    <Algo name="创建掩膜" metadata="MaskCreation" description=""/>
+                    <Algo name="应用掩膜" metadata="MaskApplication" description=""/>
+                </Group>
+                <Group name="实用工具">
+                    <Algo name="图像重采样" metadata="ImageResample" description=""/>
+                    <Algo name="创建金字塔" metadata="ImagePyramidBuild" description=""/>
+                </Group>
+                <Group name="图像运算">
+                    <Algo name="波段合成" metadata="BandCombination" description=""/>                   
+                </Group>                
+            </Group>
+            <Group name="高光谱">
+                <Group name="Hyperion预处理">
+                    <Algo name="去除坏线条带" metadata="HyspecPrePro" description=""/>
+                </Group>
+            </Group>
+            <Group name="监测分析">
+                <Group name="水利">
+                    <Algo name="水体提取" metadata="DataAutoMagic" description=""/>
+                </Group>
+                <Group name="林业">
+                    <Algo name="变化检测" metadata="ChangeDetectVegetation" description=""/>
+                </Group>
+            </Group>
+        </Group>
+        <Group name="迭代器">
+            <Group name="文件迭代器">
+                <Iterator name="栅格文件迭代器" class="RasterFileIterator" description=""/>
+                <Iterator name="矢量文件迭代器" class="VectorFileIterator" description=""/>
+            </Group>
+        </Group>
+        <Group name="原子模型">
+            <APC name="大气校正-影像匹配-正射校正" readOnly="1" file="Model/apc/AtmosphericCorrection_PIEMatch_PIEOrtho.apc" description="大气校正-影像匹配-正射校正"/>
+        </Group>
+        <Group name="标准模型">
+            <APC name="高分数据影像融合流程" readOnly="1" file="Model/apc/GFPreprocess.apc" description="高分数据影像融合流程"/>
+			<APC name="资源3号数据影像融合流程" readOnly="1" file="Model/apc/ZY3Preprocess.apc" description="资源3号数据影像融合流程"/>
+            <APC name="正射校正样例流程" readOnly="1" file="Model/apc/Preprocess.apc" description="正射校正样例流程"/>
+        </Group>
+        <Folder name="自定义模型">            
+        </Folder>
+    </ToolBox>
+</Configuration>

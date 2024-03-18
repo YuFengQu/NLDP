@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="MSS_Classify" library="SysAlgo_MltSclSgmnt" paramCount="9" description="自动分类">
+        <param index="0" name="pszImgFilename" type="file" description="输入影像文件路径，" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.img *.pix);;All Files (*.*)"}'/>
+        <param index="1" name="pszSegFilename" type="file" description="输入分割文件路径" typeParam='{"direction":"0", "filter":"Raster Files (*.shp);;All Files (*.*)"}'/>
+        <param index="2" name="pszSamFilename" type="file" description="输入样本文件路径" typeParam='{"direction":"0", "filter":"Raster Files (*.shp);;All Files (*.*)"}'/>
+        <param index="3" name="pszDstFilename" type="file" description="输出分类矢量路径" typeParam='{"direction":"1", "filter":"Raster Files (*.sll);;All Files (*.*)"}'/>
+        <param index="4" name="bSpecFeatures" type="string" description="光谱特征分类标记，bool[3]，依次是 直方图，均值，标准差，如果分类时要使用某个特征设置为true，否则为false"/>
+        <param index="5" name="bTextFeatures" type="string" description="纹理特征分类标记，bool[8]，依次是 Mean，Variance，Homogeneity，Contrast，Dissimilarity，Entropy，Second Moment，Correlation"/>
+	  <param index="6" name="bSpatialFeatures" type="string" description="空间特征分类标记，bool[8]，依次是 面积，长度，形状指数，Rectness，Ratio，Asymmetry，Density，Roundness" />
+	  <param index="7" name="bIndexFeatures" type="string" description="指数特征分类标记，bool[2]，依次是 NDVI，NDWI" />
+        <param index="8" name="papszParamters" type="string" description="分类器参数"/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

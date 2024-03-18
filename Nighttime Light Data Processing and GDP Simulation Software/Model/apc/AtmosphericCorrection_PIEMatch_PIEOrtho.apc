@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<Configuration>
+    <!--算法-->
+    <Processes>
+        <Process class="algo" name="{3a4af1c8-bb61-4705-8ffd-edf9369f1de3}" description="大气校正" posX="-35.25" posY="-246.75" painter="" processName="AtmosphericCorrection">
+            <Parameter name="DataType" type="int" direction="0" value="1" description="数据类型"/>
+            <Parameter name="InputIMGFile" type="file" direction="0" value="%{02199f36-f60a-42c7-b0a6-f559553c0b92}%" description="输入文件"/>
+            <Parameter name="InputXMLFile" type="file" direction="0" value="%{95cfec36-b4d2-4c56-95c4-1e0f227b0b40}%" description="元数据文件"/>
+            <Parameter name="AtmModel" type="int" direction="0" value="0" description="大气模式"/>
+            <Parameter name="AerosolType" type="int" direction="0" value="1" description="气溶胶类型"/>
+            <Parameter name="InitialVIS" type="float" direction="0" value="40.0" description="初始能见度"/>
+            <Parameter name="AeroRetrieval" type="int" direction="0" value="1" description="是否反演气溶胶"/>
+            <Parameter name="OutputFile" type="file" direction="1" value="%{ca164d20-f303-4b13-a192-02a5f6a012c2}%" description="输出文件"/>
+        </Process>
+        <Process class="algo" name="{8efd0879-31ea-4c75-926b-42a014618749}" description="影像匹配" posX="144" posY="-242" painter="" processName="PIEMatch">
+            <Parameter name="InputIMGFile" type="file" direction="0" value="%{ca164d20-f303-4b13-a192-02a5f6a012c2}%" description="输入文件"/>
+            <Parameter name="InputRPCFile" type="file" direction="0" value="%{b8c606ff-6139-4eab-ad83-13092b598c5f}%" description="RPC文件名"/>
+            <Parameter name="InputBASEFile" type="filePath" direction="0" value="%{1066d60e-d568-4e78-8ebd-6a8b0b28e21e}%" description="基准文件或文件夹"/>
+            <Parameter name="InputDEMFile" type="file" direction="0" value="%{451e2588-2f82-4abf-b64b-344e0cd89c65}%" description="DEM文件"/>
+            <Parameter name="OutputGCPFile" type="file" direction="1" value="%{5b435d52-861f-45b0-9fcf-419e56606e25}%" description="输出控制点文件"/>
+            <Parameter name="CoefThres" type="float" direction="0" value="0.700000" description="相关系数阈值"/>
+            <Parameter name="RmsThres" type="float" direction="0" value="3.000000" description="相差剔除阈值"/>
+            <Parameter name="FeatureNum" type="int" direction="0" value="3000" description="特征点数"/>
+        </Process>
+        <Process class="algo" name="{b2e5593c-bb5a-4485-96fc-2a5ec058b8f4}" description="正射校正" posX="374.5" posY="-246" painter="" processName="PIEOrtho">
+            <Parameter name="InputIMGFile" type="file" direction="0" value="%{ca164d20-f303-4b13-a192-02a5f6a012c2}%" description="输入文件"/>
+            <Parameter name="InputRPCFile" type="file" direction="0" value="%{b8c606ff-6139-4eab-ad83-13092b598c5f}%" description="RPC文件"/>
+            <Parameter name="InputGCPFile" type="file" direction="0" value="%{5b435d52-861f-45b0-9fcf-419e56606e25}%" description="控制点文件"/>
+            <Parameter name="OutputFile" type="file" direction="1" value="%{593e4dff-c9b4-4bc5-817d-aa59e84236fb}%" description="输出文件"/>
+            <Parameter name="DestWKT" type="string" direction="0" value="GEOGCS[&quot;GCS_WGS_1984&quot;,&#10;    DATUM[&quot;D_WGS_1984&quot;,&#10;        SPHEROID[&quot;WGS_1984&quot;,6378137,298.257223563]],&#10;    PRIMEM[&quot;Greenwich&quot;,0],&#10;    UNIT[&quot;Degree&quot;,0.017453292519943295]]" description="投影设置"/>
+            <Parameter name="ConstDem" type="long" direction="0" value="340" description="高程常值"/>
+            <Parameter name="InputDEMFile" type="file" direction="0" value="" description="dem影像"/>
+            <Parameter name="ResamplType" type="long" direction="0" value="0" description="重采样类型"/>
+            <Parameter name="OutPixelX" type="float" direction="0" value="0.000020" description="X分辨率"/>
+            <Parameter name="OutPixelY" type="float" direction="0" value="0.000020" description="Y分辨率"/>
+        </Process>
+    </Processes>
+    <!--数据-->
+    <Vars>
+        <Var class="file" name="{02199f36-f60a-42c7-b0a6-f559553c0b92}" description="原始数据" posX="-205" posY="-246" painter="{&quot;width&quot;:&quot;127.500000&quot;, &quot;height&quot;:&quot;66.000000&quot;}" constant="0" funExp="" typeParam="{&quot;direction&quot;:&quot;0&quot;, &quot;filter&quot;:&quot;Raster Files (*.tif *.tiff);;All Files (*.*)&quot;}"/>
+        <Var class="file" name="{95cfec36-b4d2-4c56-95c4-1e0f227b0b40}" description="元数据文件" posX="-160" posY="-104" painter="{&quot;width&quot;:&quot;116.500000&quot;, &quot;height&quot;:&quot;62.000000&quot;}" constant="0" funExp="$ReplaceExtension(%{02199f36-f60a-42c7-b0a6-f559553c0b92}%, 'xml')" typeParam="{&quot;direction&quot;:&quot;0&quot;, &quot;filter&quot;:&quot;XML Files (*.xml);;All Files (*.*)&quot;}"/>
+        <Var class="file" name="{ca164d20-f303-4b13-a192-02a5f6a012c2}" description="大气" posX="47.75" posY="-72" painter="{&quot;width&quot;:&quot;132.500000&quot;, &quot;height&quot;:&quot;58.000000&quot;}" constant="0" funExp="$ReplaceDirectory(%{3e5c2056-9fb3-47e5-aa70-3923d0e83d6e}%, $AppendSuffix(%{02199f36-f60a-42c7-b0a6-f559553c0b92}%, '_Atmospheric'))" typeParam="{&quot;direction&quot;:&quot;0&quot;, &quot;filter&quot;:&quot;Raster Files (*.tif *.tiff);;All Files (*.*)&quot;}"/>
+        <Var class="file" name="{b8c606ff-6139-4eab-ad83-13092b598c5f}" description="RPC文件" posX="373.75" posY="-67" painter="{&quot;width&quot;:&quot;113.500000&quot;, &quot;height&quot;:&quot;56.000000&quot;}" constant="0" funExp="$ReplaceExtension(%{ca164d20-f303-4b13-a192-02a5f6a012c2}%, 'rpb')" typeParam=""/>
+        <Var class="file" name="{5b435d52-861f-45b0-9fcf-419e56606e25}" description="控制点文件匹配Pan" posX="218.25" posY="-65.5" painter="{&quot;width&quot;:&quot;135.000000&quot;, &quot;height&quot;:&quot;62.000000&quot;}" constant="0" funExp="$ReplaceExtension(%{ca164d20-f303-4b13-a192-02a5f6a012c2}%, 'gcp')" typeParam="{&quot;direction&quot;:&quot;1&quot;, &quot;filter&quot;:&quot;All Files (*.*)&quot;}"/>
+        <Var class="file" name="{593e4dff-c9b4-4bc5-817d-aa59e84236fb}" description="结果数据" posX="575.25" posY="-245.5" painter="{&quot;width&quot;:&quot;103.500000&quot;, &quot;height&quot;:&quot;59.000000&quot;}" constant="0" funExp="" typeParam="{&quot;direction&quot;:&quot;1&quot;, &quot;filter&quot;:&quot;Raster Files (*.tif *.tiff);;All Files (*.*)&quot;}"/>
+        <Var class="filePath" name="{1066d60e-d568-4e78-8ebd-6a8b0b28e21e}" description="基准文件" posX="77.25" posY="-389" painter="{&quot;width&quot;:&quot;115.500000&quot;, &quot;height&quot;:&quot;54.000000&quot;}" constant="0" funExp="" typeParam=""/>
+        <Var class="file" name="{451e2588-2f82-4abf-b64b-344e0cd89c65}" description="Dem文件" posX="235.75" posY="-387" painter="{&quot;width&quot;:&quot;104.500000&quot;, &quot;height&quot;:&quot;52.000000&quot;}" constant="0" funExp="" typeParam=""/>
+        <Var class="folder" name="{3e5c2056-9fb3-47e5-aa70-3923d0e83d6e}" description="临时文件夹" posX="-385.75" posY="-83.5" painter="{&quot;width&quot;:&quot;115.500000&quot;, &quot;height&quot;:&quot;53.000000&quot;}" constant="0" funExp="" typeParam=""/>
+    </Vars>
+    <!--依赖关系-->
+    <Arrows>
+        <Arrow head="{3a4af1c8-bb61-4705-8ffd-edf9369f1de3}" headType="process" headParam="strInputXML" tail="{95cfec36-b4d2-4c56-95c4-1e0f227b0b40}" tailType="var" tailParam="" class="arrow" name="{4fbbd0c9-f54d-4b95-854e-444748f82920}" posX="0" posY="0" painter=""/>
+        <Arrow head="{ca164d20-f303-4b13-a192-02a5f6a012c2}" headType="var" headParam="" tail="{3a4af1c8-bb61-4705-8ffd-edf9369f1de3}" tailType="process" tailParam="strOutputSR" class="arrow" name="{874ce7db-55ea-4b93-90a5-a89f80497cf4}" posX="0" posY="0" painter=""/>
+        <Arrow head="{3a4af1c8-bb61-4705-8ffd-edf9369f1de3}" headType="process" headParam="strInputFile" tail="{02199f36-f60a-42c7-b0a6-f559553c0b92}" tailType="var" tailParam="" class="arrow" name="{f3d06bf4-f250-4140-abf3-a638edce3e3f}" posX="0" posY="0" painter=""/>
+        <Arrow head="{8efd0879-31ea-4c75-926b-42a014618749}" headType="process" headParam="strRPCFileName" tail="{b8c606ff-6139-4eab-ad83-13092b598c5f}" tailType="var" tailParam="" class="arrow" name="{24e82d01-b340-4e66-9cf2-f0406e23ffb9}" posX="0" posY="0" painter=""/>
+        <Arrow head="{5b435d52-861f-45b0-9fcf-419e56606e25}" headType="var" headParam="" tail="{8efd0879-31ea-4c75-926b-42a014618749}" tailType="process" tailParam="strGCPFile" class="arrow" name="{e32f38ed-6634-41f1-9969-afd6d2fb1d0d}" posX="0" posY="0" painter=""/>
+        <Arrow head="{8efd0879-31ea-4c75-926b-42a014618749}" headType="process" headParam="strSrcFileName" tail="{ca164d20-f303-4b13-a192-02a5f6a012c2}" tailType="var" tailParam="" class="arrow" name="{1075a7d0-7356-412f-b430-56836a5b616d}" posX="0" posY="0" painter=""/>
+        <Arrow head="{593e4dff-c9b4-4bc5-817d-aa59e84236fb}" headType="var" headParam="" tail="{b2e5593c-bb5a-4485-96fc-2a5ec058b8f4}" tailType="process" tailParam="strOutputFile" class="arrow" name="{4b874b4d-dbaf-4cda-aac6-c2025cd24e5c}" posX="0" posY="0" painter=""/>
+        <Arrow head="{b2e5593c-bb5a-4485-96fc-2a5ec058b8f4}" headType="process" headParam="strSrcFileName" tail="{ca164d20-f303-4b13-a192-02a5f6a012c2}" tailType="var" tailParam="" class="arrow" name="{0a2860e9-4d93-44b6-9533-f2d85d4738da}" posX="0" posY="0" painter=""/>
+        <Arrow head="{b2e5593c-bb5a-4485-96fc-2a5ec058b8f4}" headType="process" headParam="strRPCFileName" tail="{b8c606ff-6139-4eab-ad83-13092b598c5f}" tailType="var" tailParam="" class="arrow" name="{387f452f-2a9d-4df2-b480-22b24d7f4cad}" posX="0" posY="0" painter=""/>
+        <Arrow head="{b2e5593c-bb5a-4485-96fc-2a5ec058b8f4}" headType="process" headParam="strGcpFileName" tail="{5b435d52-861f-45b0-9fcf-419e56606e25}" tailType="var" tailParam="" class="arrow" name="{e3f8e563-088f-459c-97d4-26e824939551}" posX="0" posY="0" painter=""/>
+        <Arrow head="{8efd0879-31ea-4c75-926b-42a014618749}" headType="process" headParam="strBaseFiles" tail="{1066d60e-d568-4e78-8ebd-6a8b0b28e21e}" tailType="var" tailParam="" class="arrow" name="{3b1a6f6f-ea99-4933-b855-a2446b4383c8}" posX="0" posY="0" painter=""/>
+        <Arrow head="{8efd0879-31ea-4c75-926b-42a014618749}" headType="process" headParam="strDemfile" tail="{451e2588-2f82-4abf-b64b-344e0cd89c65}" tailType="var" tailParam="" class="arrow" name="{b62985ac-56d2-4400-bae1-da555ebcde45}" posX="0" posY="0" painter=""/>
+    </Arrows>
+</Configuration>

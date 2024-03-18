@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="BandCombination_LandSat" library="BandCombination_LandSat" paramCount="2" description="LandSat影像波段合成">
+        <param index="0" name="InputMTLFilePath" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"text Files (*.txt);;All Files (*.*)"}'/>
+        <param index="1" name="OutputFilePath" type="file" description="输出文件" typeParam='{"direction":"0"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

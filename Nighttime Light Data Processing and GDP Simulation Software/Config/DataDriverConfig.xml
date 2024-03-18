@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GB2312" standalone="no" ?>
+<DataDriverConfig>
+    <Driver valid="1" data_type="mif||TAB|kml|mdb|gdb|gpkg|kml|kmz" library="VectorDriver" />
+    <Driver valid="1" data_type="shp|SHP" library="SHPDriver" />
+    <!--<Driver valid="1" data_type="shp|SHP" library="SHPDriver  VectorDriver" />-->
+    <Driver valid="1" data_type="000" library="VectorDriver|MicapsDriver" />
+    <Driver valid="1" data_type="hdf|h5" library="HDFDriver|RasterDriver" />
+    <Driver valid="1" data_type="xml" library="CPDriver" />
+    <Driver valid="1" data_type="awx" library="VectorDriver" />
+    <Driver valid="1" data_type="awx" library="RasterDriver" />
+    <Driver valid="1" data_type="nc" library="NCDriver" />
+    <Driver valid="1" data_type="grb|grb2" library="GribDriver" />
+    <Driver valid="1" data_type="latlon" library="RadarPtDataDriver" />
+    <Driver valid="1" data_type="vrt" library="RasterDriver" />
+    <Driver valid="1" data_type="db3" library="SqliteAnnotationDriver" />
+    <Driver valid="1" data_type="ipf|lsf|l1b||tif|tiff|geotiff|TIF|vrt|JP2|bmp|img|jpg|png|ldf|dat|1bd|1b|pix|bip|bil|bsq|cos|RAW|geotiff|ld3" library="RasterDriver" />
+    <Driver valid="1" data_type="txt|L1T|Sent2" library="RasterDriver" />
+    <Driver valid="1" data_type="txt|L1T|Sent2" library="MultiRasterDriver" />
+    <InvalidFormat suffix="xlsx|xls" />
+</DataDriverConfig>

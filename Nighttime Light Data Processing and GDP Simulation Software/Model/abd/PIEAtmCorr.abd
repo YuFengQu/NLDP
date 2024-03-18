@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="PIEAtmCorr" library="PIEAtmCorr" paramCount="8" description="GF5大气校正">
+        <param index="0" name="InputGF5PreImg" type="file" description="GF5定标后影像" />
+        <param index="1" name="OutputSRFlie" type="file" description="输出反射率文件" />
+        <param index="2" name="MetadataFile" type="file" description="元数据文件" />
+        <param index="3" name="isOutAot" type="file" description="是否输出气溶胶反演产品" />
+        <param index="4" name="isOutWater" type="enum" description="是否输出水体反演产品"/>
+        <param index="5" name="SensorID" type="enum" description="输入影像传感器类型" />
+        <param index="6" name="DataType" type="file" description="输入数据类型" />
+        <param index="7" name="FilterWindow" type="file" description="滤波窗口" />
+    </Algo>
+</Configuration>

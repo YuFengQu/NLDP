@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="HypGF5RadiometricCalibrate" library="HypGF5RadiometricCalibrate" paramCount="8" description="GF5辐射定标">
+        <param index="0" name="InputGF5PreImg" type="file" description="GF5预处理后的影像" />
+        <param index="1" name="VNIRRadCal" type="file" description="VNIR定标系数文件" />
+        <param index="2" name="SWIRRadCal" type="file" description="SWIR定标系数文件" />
+        <param index="3" name="InputOGPFile" type="file" description="太阳高度角文件" />
+        <param index="4" name="OGPBand" type="enum" description="太阳高度角波段"/>
+        <param index="5" name="RadType" type="enum" description="定标类型" />
+        <param index="6" name="OutputType" type="file" description="输出数据存储格式" />
+        <param index="7" name="OutputFile" type="file" description="输出文件" />
+    </Algo>
+</Configuration>

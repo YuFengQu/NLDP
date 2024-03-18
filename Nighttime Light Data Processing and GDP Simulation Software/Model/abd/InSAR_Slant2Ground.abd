@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="InSAR_Slant2Ground" library="InSAR_Slant2Ground" paramCount="6" description="斜地距转换">
+        <param index="0" name="strSrcFileName" type="file" description="输入斜距影像文件"/>
+		<param index="1" name="OutParameter" type="file" description="输出参数设置方式" typeParam='{"AzimuthLooks":"方位向视数", "PixelSize":"像素大小"}'/>
+		<param index="2" name="AzimuthLooks" type="int" description="方位向视数"/>
+		<param index="3" name="PixelSize" type="double" description="像素大小"/>
+		<param index="4" name="strFileTypeCode" type="file" description="输出文件数据类型" typeParam='{"ENVI":"img", "ERDAS":"img", "TIFF":"tif"}'/>
+		<param index="5" name="strOutputData" type="file" direction="1" description="输出目录"/>
+    </Algo>
+</Configuration>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="DataAutoMagic" library="DataAutoMagic" paramCount="3" description="水体提取">
+        <param index="0" name="strSelectFiles" type="multiFile" description="选择文件"/>
+        <param index="1" name="strRegionShp" type="file" description="区域矢量"/>
+        <param index="2" name="strOutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Shape Files (*.shp)"}'/>
+    </Algo>
+</Configuration>

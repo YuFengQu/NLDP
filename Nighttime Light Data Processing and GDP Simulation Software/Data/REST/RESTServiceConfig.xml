@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<RESTServices>
+	<RESTService ServiceName="Arcgis Server" 
+			 ServiceURL="http://192.168.30.222:6080/arcgis/rest/services" 
+	/>
+</RESTServices>

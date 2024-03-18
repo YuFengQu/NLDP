@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="AtmosphericCorrection" library="AtmosphericCorrection" paramCount="7" description="大气校正">
+        <param index="0" name="DataType" type="enum" typeParam='{"1":"DN值", "2":"表观辐亮度", "3":"表观反射率"}' defaultValue="1" description="数据类型"/>
+        <param index="1" name="InputIMGFile" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="2" name="InputXMLFile" type="file" description="元数据文件" typeParam='{"direction":"0", "filter":"XML Files (*.xml);;All Files (*.*)"}'/>
+        <param index="3" name="AtmModel" type="enum" typeParam='{"0":"系统自动选择大气模式", "1":"热带大气模式", "2":"中纬度夏季大气模式", "3":"中纬度冬季大气模式", "4":"副极地夏季大气模式", "5":"副极地冬季大气模式", "6":"美国1962大气模式"}' defaultValue="0" description="大气模式"/>
+        <param index="4" name="AerosolType" type="enum" typeParam='{"1":"大陆型气溶胶", "2":"海洋型气溶胶", "3":"城市型气溶胶", "4":"沙尘型气溶胶", "5":"煤烟型气溶胶", "6":"平流层气型溶胶"}' defaultValue="1" description="气溶胶类型"/>
+        <param index="5" name="InitialVIS" type="float" defaultValue="40.0" description="初始能见度"/>
+        <param index="6" name="AeroRetrieval" type="enum" typeParam='{"0":"否", "1":"是"}' defaultValue="1" description="是否反演气溶胶"/>
+        <param index="7" name="OutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

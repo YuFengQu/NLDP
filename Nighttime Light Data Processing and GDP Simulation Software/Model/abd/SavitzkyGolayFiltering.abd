@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="SavitzkyGolayFiltering" library="SavitzkyGolayFiltering" paramCount="7" description="GF5图像滤波">
+        <param index="0" name="InputGF5PreImg" type="file" description="输入影像"/>
+        <param index="1" name="OutputImg" type="file" description="输出影像文件" />
+        <param index="2" name="SpectralSub" type="file" description="光谱子集" />
+        <param index="3" name="SpatialSub" type="file" description="空间子集" />
+        <param index="4" name="PointsNum" type="enum" description="点数"/>
+        <param index="5" name="PolynomialDegree" type="enum" description="多项式阶次" />
+        <param index="6" name="CacheSize" type="file" description="缓存区大小" />
+    </Algo>
+</Configuration>

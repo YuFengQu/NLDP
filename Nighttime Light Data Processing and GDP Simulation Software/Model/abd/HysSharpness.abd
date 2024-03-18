@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="HysSharpness" library="HysSharpness" paramCount="5" description="清晰度评价">
+		<param index="0" name="InputFilePath" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+		<param index="1" name="InputSpacerange" type="string" direction="1" description="空间子集范围" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+		<param index="2" name="InoutSpectrumrange" type="string" description="光谱子集范围" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+		<param index="4" name="curveType" type="int" direction="1" description="曲线类型" typeParam='{"direction":"1", "filter":"Raster Files (*.tif *.tiff)"}'/>
+		<param index="3" name="OutputTextFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"Statics Files (*.sta)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="MaskCreation" library="MaskCreation" paramCount="4" description="创建掩膜">
+        <param index="0" name="InputIMGFile" type="file" description="基准文件"/>
+        <param index="1" name="OutputFile" type="file" direction="1" description="输出文件" typeParam='{"direction":"1", "filter":"GeoTiff Files (*.tif *.tiff)"}'/>
+        <param index="2" name="InputATTRIBUTEFile" type="file" description="属性文件"/>
+        <param index="3" name="SelectAraes" type="enum" typeParam='{"1":"是", "0":"否"}' defaultValue="1"description="掩膜区域是否有效"/>
+    </Algo>
+</Configuration>

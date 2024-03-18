@@ -1,0 +1,35 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<MapDocument IsRelativePath="0">
+ <Maps>
+  <Map MapID="map_{f3de319a-4439-46f9-9a75-ee90fa4c5e4a}" Name="Map">
+   <SpatialReference/>
+   <Envelope Top="81.20827898807944" Right="135.1617432297357" Bottom="-9.489512153484714" Left="73.37093140649475"/>
+   <Layers/>
+   <GraphicsLayer Type="3" CanRotate="true" Visible="true" Name="GraphicsLayer">
+    <SpatialReference/>
+    <Elements/>
+   </GraphicsLayer>
+  </Map>
+ </Maps>
+ <PageLayout>
+  <Envelope Top="31.73702764976959" Right="21.49797235023042" Bottom="-0.9329723502304166" Left="-1.602027649769586"/>
+  <PageInfo FormID="7" Orientation="1" CustomWidth="21" CustomHeight="29.7">
+   <Border LineSymbol="{&#xa;    &quot;CapStyle&quot;: 1,&#xa;    &quot;Color&quot;: 4278190080,&#xa;    &quot;JoinStyle&quot;: 1,&#xa;    &quot;MiterLimit&quot;: 0,&#xa;    &quot;Offset&quot;: 0,&#xa;    &quot;Style&quot;: 0,&#xa;    &quot;Type&quot;: 201,&#xa;    &quot;Width&quot;: 1&#xa;}&#xa;" GapX="0" GapY="0" CornerRounding="0" Name=""/>
+   <Background FillSymbol="{&#xa;    &quot;Color&quot;: 4294967295,&#xa;    &quot;OutlineSymbol&quot;: &quot;&quot;,&#xa;    &quot;Style&quot;: 0,&#xa;    &quot;Type&quot;: 301&#xa;}&#xa;" GapX="0" GapY="0" CornerRounding="0" Name=""/>
+   <Shadow FillSymbol="{&#xa;    &quot;Color&quot;: 4285427328,&#xa;    &quot;OutlineSymbol&quot;: &quot;&quot;,&#xa;    &quot;Style&quot;: 0,&#xa;    &quot;Type&quot;: 301&#xa;}&#xa;" GapX="0.2" GapY="0.2" CornerRounding="0" Name=""/>
+  </PageInfo>
+  <GraphicsLayer Type="3" CanRotate="true" Visible="true" Name="GraphicsLayer">
+   <SpatialReference/>
+   <Elements>
+    <Element Type="11" AnchorPoint="0" Locked="0" ID="element_{89bed05f-11b4-4cb5-8c02-cb4e51d0ed72}" Name="">
+     <Geomtry GeomtryJson="{&#xa;    &quot;GeometryData&quot;: &quot;1.14976000,0.90814276,20.04980000,28.65000000&quot;,&#xa;    &quot;GeometryType&quot;: 32&#xa;}&#xa;"/>
+     <Map MapID="map_{f3de319a-4439-46f9-9a75-ee90fa4c5e4a}"/>
+     <GeoEnvelope MaxY="70.04153463866469" MinY="1.677232195930035" MaxX="135.1617432297357" MinX="73.37093140649475"/>
+     <Border LineSymbol="{&#xa;    &quot;CapStyle&quot;: 1,&#xa;    &quot;Color&quot;: 4278190080,&#xa;    &quot;JoinStyle&quot;: 1,&#xa;    &quot;MiterLimit&quot;: 0,&#xa;    &quot;Offset&quot;: 0,&#xa;    &quot;Style&quot;: 0,&#xa;    &quot;Type&quot;: 201,&#xa;    &quot;Width&quot;: 1&#xa;}&#xa;" GapX="0" GapY="0" CornerRounding="0" Name=""/>
+     <Background FillSymbol="{&#xa;    &quot;Color&quot;: 4294967295,&#xa;    &quot;OutlineSymbol&quot;: &quot;&quot;,&#xa;    &quot;Style&quot;: 0,&#xa;    &quot;Type&quot;: 301&#xa;}&#xa;" GapX="0" GapY="0" CornerRounding="-6.277438562204193e+66" Name=""/>
+     <Shadow FillSymbol="{&#xa;    &quot;Color&quot;: 4285427328,&#xa;    &quot;OutlineSymbol&quot;: &quot;&quot;,&#xa;    &quot;Style&quot;: 0,&#xa;    &quot;Type&quot;: 301&#xa;}&#xa;" GapX="0" GapY="0" CornerRounding="0" Name=""/>
+    </Element>
+   </Elements>
+  </GraphicsLayer>
+ </PageLayout>
+</MapDocument>

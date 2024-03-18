@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<Configuration>
+
+    <!-- 算法描述 -->
+    <Algo name="CreateMetaData_PaInv" library="CreateMetaData" paramCount="7" description="生产元数据">
+        <param index="0" name="InputFilePath" type="file" description="输入文件" typeParam='{"direction":"0", "filter":"Raster Files (*.tif *.tiff);;All Files (*.*)"}'/>
+        <param index="1" name="InputSrcXmlPath" type="file" description="输入XML文件" typeParam='{"direction":"0", "filter":"Raster Files (*.xml);;All Files (*.*)"}'/>
+	  <param index="2" name="Algorithm" type="string" description="" typeParam='{"direction":"0", "filter":"Raster Files (*.xml);;All Files (*.*)"}'/>
+	  <param index="3" name="OperatorName" type="string" description="" typeParam='{"direction":"0", "filter":"Raster Files (*.xml);;All Files (*.*)"}'/>
+	  <param index="4" name="ProducDepart" type="string" description="" typeParam='{"direction":"0", "filter":"Raster Files (*.xml);;All Files (*.*)"}'/>
+	  <param index="5" name="QCName" type="string" description="" typeParam='{"direction":"0", "filter":"Raster Files (*.xml);;All Files (*.*)"}'/>
+	  <param index="6" name="QCDepart" type="string" description="" typeParam='{"direction":"0", "filter":"Raster Files (*.xml);;All Files (*.*)"}'/>
+    </Algo>
+
+    <!-- 定义算法元数据的UI文件 -->
+
+</Configuration>
